@@ -283,13 +283,13 @@
 
                             <!-- Kategori Buku -->
                             <li>
-                                <a href=""
+                                <a href="{{ route('instruktur.index') }}"
                                     class="flex items-center p-2 text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group">
                                     <svg class="w-6 h-6 text-gray-700 group-hover:text-gray-900" fill="currentColor"
                                         viewBox="0 0 24 24">
                                         <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
                                     </svg>
-                                    <span class="ml-3 flex-1 whitespace-nowrap">Kategori Buku</span>
+                                    <span class="ml-3 flex-1 whitespace-nowrap">Instruktur</span>
                                 </a>
                             </li>
 
