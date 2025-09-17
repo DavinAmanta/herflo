@@ -20,6 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://themewagon.github.io/windster/favicon-16x16.png">
     <link rel="icon" type="image/png" href="https://themewagon.github.io/windster/favicon.ico">
     <link rel="manifest" href="https://themewagon.github.io/windster/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="mask-icon" href="https://themewagon.github.io/windster/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -295,13 +296,13 @@
 
                             <!-- Peminjaman -->
                             <li>
-                                <a href=""
+                                <a href="{{ route('jadwal.index') }}"
                                     class="flex items-center p-2 text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group">
                                     <svg class="w-6 h-6 text-gray-700 group-hover:text-gray-900" fill="currentColor"
                                         viewBox="0 0 24 24">
                                         <path d="M19 3H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
                                     </svg>
-                                    <span class="ml-3 flex-1 whitespace-nowrap">Peminjaman</span>
+                                    <span class="ml-3 flex-1 whitespace-nowrap">Jadwal Kelas</span>
                                 </a>
                             </li>
 

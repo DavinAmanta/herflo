@@ -17,4 +17,9 @@ class Instruktur extends Model
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
+
+    public function jadwalKelas()
+    {
+        return $this->hasMany(JadwalKelas::class, 'id_instruktur', 'id');
+    }
 }
