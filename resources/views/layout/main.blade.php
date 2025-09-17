@@ -179,7 +179,7 @@
                                 </a>
                             </div> --}}
                             <div class="border-t border-gray-100">
-                                <form id="logout-form" method="POST" action="">
+                                <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button type="submit"
                                         class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
@@ -271,13 +271,13 @@
 
                             <!-- Buku -->
                             <li>
-                                <a href=""
+                                <a href="{{ route('galeri.index') }}"
                                     class="flex items-center p-2 text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group">
                                     <svg class="w-6 h-6 text-gray-700 group-hover:text-gray-900" fill="currentColor"
                                         viewBox="0 0 24 24">
                                         <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12V2zM8 20V4h10v16H8z" />
                                     </svg>
-                                    <span class="ml-3 flex-1 whitespace-nowrap">Buku</span>
+                                    <span class="ml-3 flex-1 whitespace-nowrap">Galeri</span>
                                 </a>
                             </li>
 
