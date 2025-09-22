@@ -402,24 +402,20 @@
     </footer>
 
     <script>
-        // Toggle mobile menu
         const toggle = document.getElementById("menu-toggle");
         const menu = document.getElementById("mobile-menu");
         toggle.addEventListener("click", () => {
             menu.classList.toggle("hidden");
         });
 
-        // Animation on page load
         document.addEventListener("DOMContentLoaded", () => {
             const loadElements = document.querySelectorAll(".animate-on-load");
             loadElements.forEach((el, index) => {
                 setTimeout(() => {
                     el.classList.add("is-visible");
-                }, index * 100); // Staggered delay for load animations
+                }, index * 100);
             });
         });
-
-        // Scroll-based animations with IntersectionObserver
         const faders = document.querySelectorAll(".fade-in, .fade-in-up, .scale-in");
         const staggeredItems = document.querySelectorAll(".staggered-item");
         const appearOptions = {

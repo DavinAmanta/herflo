@@ -10,7 +10,7 @@
                 clip-rule="evenodd"></path>
         </svg>
         Tambah User
-    </button>
+    </button> 
     <table class="table-fixed min-w-full divide-y divide-gray-200 shadow-sm rounded-lg overflow-hidden mt-3">
         <thead class="bg-gray-100">
             <tr>
