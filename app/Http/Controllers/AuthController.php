@@ -9,12 +9,17 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function index()
+    /**
+     * Tampilkan form login
+     */
+    public function showLogin()
     {
         return view('auth.login');
     }
 
-    // proses login
+    /**
+     * Proses login
+     */
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -26,12 +31,13 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             $role = Auth::user()->role;
+
+            // Redirect sesuai role
             if ($role === 'admin') {
                 return redirect()->route('admin.dashboard');
             } elseif ($role === 'instruktur') {
                 return redirect()->route('instruktur.dashboard');
-            } elseif ($role === 'member') {
-                return redirect()->route('member.dashboard');
+
             }
             return redirect()->route('user.dashboard');
         }
@@ -39,43 +45,46 @@ class AuthController extends Controller
         return back()->with('error', 'Email atau password salah!');
     }
 
-    // tampilkan form register
+    /**
+     * Tampilkan form register
+     */
     public function showRegister()
     {
         return view('auth.register');
     }
 
-    // proses register
+    /**
+     * Proses register (default role = user)
+     */
     public function register(Request $request)
     {
         $request->validate([
             'name'     => 'required|string|max:100',
             'email'    => 'required|email|unique:users,email',
             'password' => 'required|min:5|confirmed',
-            'no_hp'    => 'required|string|max:15',
-            'alamat'   => 'required|string',
         ]);
 
         $user = User::create([
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
-            'no_hp'    => $request->no_hp,
-            'alamat'   => $request->alamat,
-            'role'     => 'user', // default
+            'role'     => 'user', // default setelah register
         ]);
 
         Auth::login($user);
 
-        return redirect()->route('user.dashboard')->with('success', 'Registrasi berhasil!');
+        return redirect()->route('user.dashboard')->with('success', 'Registrasi berhasil! Silakan lengkapi data untuk daftar member jika ingin bergabung.');
     }
 
-    // logout
+    /**
+     * Logout
+     */
     public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('auth.login.form')->with('success', 'Anda berhasil logout.');
+
+        return redirect()->route('login')->with('success', 'Anda berhasil logout.');
     }
 }

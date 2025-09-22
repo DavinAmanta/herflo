@@ -17,7 +17,7 @@
             <a href="{{ url('/') }}"
                 class="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10">
                 <img src="https://themewagon.github.io/windster/images/logo.svg" class="h-10 mr-4" alt="Logo">
-                <span class="self-center text-2xl font-bold whitespace-nowrap">Perpustakaan</span>
+                <span class="self-center text-2xl font-bold whitespace-nowrap">Herflo | Gym</span>
             </a>
             <!-- Card -->
             <div class="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
@@ -30,19 +30,19 @@
                         <div>
                             <label class="text-sm font-medium text-gray-900 block mb-2">Email</label>
                             <input type="email" name="email" id="email"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg 
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg
                                        focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                 placeholder="name@company.com" required>
                         </div>
                         <div>
                             <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Password</label>
                             <input type="password" name="password" id="password" placeholder="••••••••"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg 
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg
                                        focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                 required>
                         </div>
                         <button type="submit"
-                            class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 
+                            class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200
                                    font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center">
                             Login
                         </button>

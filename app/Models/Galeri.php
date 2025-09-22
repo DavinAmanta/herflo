@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
-    protected $fillable = [
-        'id',
-        'judul',
-        'gambar',
-        'deskripsi'
-    ];
+    use HasFactory;
+
+    protected $table = 'galeri';
+    protected $guarded = ['id'];
 }

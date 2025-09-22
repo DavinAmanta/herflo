@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aplikasi Perpustakaan - Register</title>
+    <title>Aplikasi Gym - Register</title>
     <link rel="stylesheet" href="https://themewagon.github.io/windster/app.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -24,7 +24,7 @@
                     <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">
                         Create your account
                     </h2>
-                    <form class="mt-8 space-y-6" action="{{ route('register') }}" method="POST">
+                    <form class="mt-8 space-y-6" action="{{ route('register.post') }}" method="POST">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -51,18 +51,6 @@
                                 <input type="password" name="password_confirmation" id="password_confirmation"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                     required>
-                            </div>
-                            <div>
-                                <label class="text-sm font-medium text-gray-900 block mb-2">Nomor HP</label>
-                                <input type="text" name="no_hp" id="no_hp"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                                    placeholder="08123456789" required>
-                            </div>
-                            <div>
-                                <label class="text-sm font-medium text-gray-900 block mb-2">Alamat</label>
-                                <textarea name="alamat" id="alamat"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                                    rows="3" required></textarea>
                             </div>
                         </div>
                         <button type="submit"
@@ -91,7 +79,6 @@
             showConfirmButton: false,
             timer: 2000
         });
-
     </script>
     @endif
 
@@ -103,7 +90,6 @@
             text: '{{ session('error') }}',
             showConfirmButton: true,
         });
-
     </script>
     @endif
 
@@ -111,7 +97,7 @@
     <script>
         let errors = '';
         @foreach($errors->all() as $error)
-        errors += '<li>{{ $error }}</li>';
+            errors += '<li>{{ $error }}</li>';
         @endforeach
         Swal.fire({
             icon: 'error',
@@ -119,7 +105,6 @@
             html: `<ul style="text-align: left; list-style-position: inside;">${errors}</ul>`,
             showConfirmButton: true,
         });
-
     </script>
     @endif
 </body>

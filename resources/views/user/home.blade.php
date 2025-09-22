@@ -151,7 +151,7 @@
 </head>
 
 <body class="bg-[#f8f4f1] text-gray-800">
-    <header class="bg-[#f8f4f1] fixed w-full shadow-md z-50">
+<header class="bg-[#f8f4f1] fixed w-full shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center px-4 py-4 lg:py-6">
             <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">HerFlo</div>
             <div class="hidden lg:flex space-x-8 text-base font-medium">
@@ -160,7 +160,19 @@
                 <a href="#" class="hover:text-[#7d6b60] transition-colors animate-on-load">Personal Trainer</a>
                 <a href="#" class="hover:text-[#7d6b60] transition-colors animate-on-load">Subject</a>
             </div>
-            <a href="#" class="btn-custom hidden lg:block text-sm animate-on-load">Free Trial</a>
+            <div class="hidden lg:flex items-center space-x-4">
+                @guest
+                    <a href="{{ route('login') }}" class="btn-custom text-sm animate-on-load">Free Trial</a>
+                @else
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                       class="text-gray-600 hover:text-red-500 transition-colors animate-on-load">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h3a3 3 0 013 3v1" />
+                        </svg>
+                    </a>
+                @endguest
+            </div>
             <button class="lg:hidden" id="menu-toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#7d6b60]" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -173,10 +185,26 @@
             <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Membership</a>
             <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Personal Trainer</a>
             <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Subject</a>
-            <a href="#" class="btn-custom inline-block text-center mt-4 animate-on-load">Free Trial</a>
+            @guest
+                <a href="{{ route('login') }}" class="btn-custom inline-block text-center mt-4 animate-on-load">Free Trial</a>
+            @else
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="py-2 text-gray-600 hover:text-red-500 rounded-lg px-4 transition-colors animate-on-load">
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h3a3 3 0 013 3v1" />
+                        </svg>
+                        <span>Logout</span>
+                    </div>
+                </a>
+            @endguest
         </div>
     </header>
 
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
     <section class="bg-gradient-to-r from-white via-[#fdf9f7] to-[#f8f4f1] pt-28 lg:pt-32">
         <div class="container mx-auto px-6 lg:px-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
