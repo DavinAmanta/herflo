@@ -21,7 +21,7 @@ use App\Http\Controllers\JadwalKelasController; // ✅ tambahkan ini
 */
 
 Route::get('/', function () {
-    return view('user.home');
+    return view('user.trainer');
 })->name('home');
 
 Route::middleware('guest')->group(function () {
