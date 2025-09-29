@@ -162,7 +162,7 @@
             </div>
             <div class="hidden lg:flex items-center space-x-4">
                 @guest
-                    <a href="{{ route('login') }}" class="btn-custom text-sm animate-on-load">Free Trial</a>
+                    <a href="{{ route('login') }}" class="btn-custom text-sm animate-on-load">Login</a>
                 @else
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
@@ -186,7 +186,7 @@
             <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Personal Trainer</a>
             <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Subject</a>
             @guest
-                <a href="{{ route('login') }}" class="btn-custom inline-block text-center mt-4 animate-on-load">Free Trial</a>
+                <a href="{{ route('login') }}" class="btn-custom inline-block text-center mt-4 animate-on-load">Login</a>
             @else
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
