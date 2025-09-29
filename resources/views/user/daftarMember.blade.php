@@ -12,68 +12,43 @@
             </p>
 
             <section class="mb-20">
-                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl max-w-4xl mx-auto fade-in-up">
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-[#7d6b60] mb-8 border-b pb-4">
-                        Formulir Pendaftaran
+                        Formulir Pendaftaran Member
                     </h2>
 
-                    <form action="#" method="POST" class="space-y-6">
-                        <!-- Nama & Email -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama
-                                    Lengkap</label>
-                                <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
-                   focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
-                   transition duration-200 ease-in-out" placeholder="Masukkan nama Anda">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
-                   focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
-                   transition duration-200 ease-in-out" placeholder="contoh@mail.com">
-                            </div>
-                        </div>
-
-                        <!-- Telepon & Tanggal Lahir -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Nomor
-                                    Telepon</label>
-                                <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
-                   focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
-                   transition duration-200 ease-in-out" placeholder="+62 8xx xxxx xxxx">
-                            </div>
-                            <div>
-                                <label for="dob" class="block text-sm font-medium text-gray-700 mb-2">Tanggal
-                                    Lahir</label>
-                                <input type="date" id="dob" name="dob" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
-                   focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
-                   transition duration-200 ease-in-out">
-                            </div>
-                        </div>
-
-                        <!-- Alamat -->
+                    <form action="{{ route('daftar.store') }}" method="POST" class="space-y-6">
+                        @csrf
+                        <!-- Nomor Telepon -->
                         <div>
-                            <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Alamat
-                                Domisili</label>
-                            <textarea id="address" name="address" rows="3" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
-                 focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
-                 transition duration-200 ease-in-out" placeholder="Jalan, Kota, Provinsi"></textarea>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                                Nomor Telepon
+                            </label>
+                            <input type="tel" id="phone" name="no_telp" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
+                           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
+                           transition duration-200 ease-in-out" placeholder="+62 8xx xxxx xxxx">
                         </div>
-
+                        <div>
+                            <label for="address" class="block text-sm font-medium text-gray-700 mb-2">
+                                Alamat Domisili
+                            </label>
+                            <textarea id="address" name="alamat" rows="3" required class="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-700
+                           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:border-[#7d6b60]
+                           transition duration-200 ease-in-out" placeholder="Jalan, Kota, Provinsi"></textarea>
+                        </div>
                         <!-- Submit -->
                         <div class="pt-4">
                             <button type="submit" class="w-full bg-[#7d6b60] text-white font-semibold py-3 px-6 
-                 rounded-xl shadow-md hover:bg-[#6c5c52] 
-                 focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2
-                 transition duration-200 ease-in-out text-base lg:text-lg">
-                                Lanjutkan ke Pemilihan Paket
+                           rounded-xl shadow-md hover:bg-[#6c5c52] 
+                           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2
+                           transition duration-200 ease-in-out text-base lg:text-lg">
+                                Simpan & Jadi Member
                             </button>
                         </div>
                     </form>
                 </div>
             </section>
+
 
 
             <section>

@@ -39,7 +39,7 @@ class AuthController extends Controller
                 return redirect()->route('instruktur.dashboard');
 
             }
-            return redirect()->route('user.dashboard');
+            return redirect()->route('home');
         }
 
         return back()->with('error', 'Email atau password salah!');
@@ -73,7 +73,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('user.dashboard')->with('success', 'Registrasi berhasil! Silakan lengkapi data untuk daftar member jika ingin bergabung.');
+        return redirect()->route('login')->with('success', 'Registrasi berhasil!');
     }
 
     /**

@@ -144,7 +144,6 @@
 
 </style>
 </head>
-
 <body class="bg-[#f8f4f1] text-gray-800">
     <section class="pt-28 lg:pt-40 pb-20 bg-gradient-to-br from-white via-[#fdf9f7] to-[#f8f4f1]">
         <div class="container mx-auto px-6 lg:px-16">

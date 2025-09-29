@@ -201,7 +201,14 @@
                                 Free locker
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
 
                     <!-- Monthly Flo -->
@@ -251,7 +258,14 @@
                                 1 sesi konsultasi gratis
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
 
                     <!-- 3 Month Flo -->
@@ -308,7 +322,14 @@
                                 Diskon 20% dari harga bulanan
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -365,7 +386,14 @@
                                 Free locker
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
 
                     <!-- For 3 Flo Babes -->
@@ -423,7 +451,14 @@
                                 Lebih hemat 12.5%
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
 
                     <!-- For 4 Flo Babes -->
@@ -481,7 +516,14 @@
                                 Lebih hemat 25%
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -546,7 +588,14 @@
                                 Akses eksklusif jam tertentu
                             </li>
                         </ul>
-                        <button class="w-full py-3 btn-custom text-base mt-4">Pilih Sekarang</button>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+          bg-[#7d6b60] text-white rounded-xl shadow-md 
+          hover:bg-[#6c5c52] hover:shadow-lg 
+          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+          transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+
                     </div>
                 </div>
             </div>

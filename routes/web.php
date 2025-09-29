@@ -12,7 +12,9 @@ use App\Http\Controllers\Admin\JadwalController as AdminJadwalController;
 use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\Admin\InstrukturController as AdminInstrukturController;
+use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\JadwalKelasController; // ✅ tambahkan ini
+use App\Models\DaftarMember;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +23,9 @@ use App\Http\Controllers\JadwalKelasController; // ✅ tambahkan ini
 */
 
 Route::get('/', function () {
-    return view('user.trainer');
+    return view('user.home');
 })->name('home');
+Route::resource('/daftar',DaftarController::class);
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
