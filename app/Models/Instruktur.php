@@ -11,14 +11,18 @@ class Instruktur extends Model
 {
     use HasFactory;
 
-    protected $table = 'instruktur';
+    protected $table = 'instrukturs';
     protected $guarded = ['id'];
+    protected $fillable = [
+        'id_user',
+        'foto',
+        'biaya'
+    ];
 
     public function user()
-{
-    return $this->belongsTo(User::class, 'user_id');
-    // foreign key instruktur.user_id → users.id
-}
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
 
 
     // Relasi ke JadwalKelas (seorang instruktur bisa memiliki banyak jadwal kelas)

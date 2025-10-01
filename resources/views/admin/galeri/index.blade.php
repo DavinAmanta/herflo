@@ -4,29 +4,15 @@
 <div class="d-flex items-center justify-between mb-4">
     <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Halaman Galeri</h1>
     <button type="button" data-modal-toggle="add-galeri-modal"
-        class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2">
+        class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 mt-2">
+        <svg class="-ml-1 mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                clip-rule="evenodd"></path>
+        </svg>
         Tambah Galeri
     </button>
 </div>
-
-{{-- Flash message --}}
-@if(session('success'))
-<div class="mb-4 p-3 rounded bg-green-100 text-green-800">{{ session('success') }}</div>
-@endif
-
-@if(session('error'))
-<div class="mb-4 p-3 rounded bg-red-100 text-red-800">{{ session('error') }}</div>
-@endif
-
-@if($errors->any())
-<div class="mb-4 p-3 rounded bg-red-50 text-red-800">
-    <ul class="list-disc pl-5">
-        @foreach($errors->all() as $err)
-            <li>{{ $err }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
 
 <table class="table-fixed min-w-full divide-y divide-gray-200 shadow-sm rounded-lg overflow-hidden mt-3">
     <thead class="bg-gray-100">
@@ -45,10 +31,10 @@
             <td class="p-4 text-sm font-medium text-gray-900">{{ $g->judul }}</td>
             <td class="p-4 text-sm text-gray-700">
                 @if($g->gambar)
-                    <img src="{{ asset('storage/'.$g->gambar) }}" class="h-12 w-12 object-cover rounded cursor-pointer"
-                         onclick="openImageModal('{{ asset('storage/'.$g->gambar) }}')">
+                <img src="{{ asset('storage/'.$g->gambar) }}" class="h-12 w-12 object-cover rounded cursor-pointer"
+                    onclick="openImageModal('{{ asset('storage/'.$g->gambar) }}')">
                 @else
-                    <span class="text-gray-400">-</span>
+                <span class="text-gray-400">-</span>
                 @endif
             </td>
             <td class="p-4 text-sm text-gray-700">{{ $g->deskripsi ?? '-' }}</td>
@@ -92,12 +78,14 @@
                 class="text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg p-1.5 ml-auto">✕</button>
         </div>
 
-        <form action="{{ route('admin.galeri.store') }}" method="POST" enctype="multipart/form-data" class="p-6 space-y-6">
+        <form action="{{ route('admin.galeri.store') }}" method="POST" enctype="multipart/form-data"
+            class="p-6 space-y-6">
             @csrf
             <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Judul</label>
-                    <input type="text" name="judul" value="{{ old('judul') }}" class="w-full border rounded-lg p-2.5" required>
+                    <input type="text" name="judul" value="{{ old('judul') }}" class="w-full border rounded-lg p-2.5"
+                        required>
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
@@ -131,28 +119,32 @@
                 class="text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg p-1.5 ml-auto">✕</button>
         </div>
 
-        <form action="{{ route('admin.galeri.update', $g->id) }}" method="POST" enctype="multipart/form-data" class="p-6 space-y-6">
+        <form action="{{ route('admin.galeri.update', $g->id) }}" method="POST" enctype="multipart/form-data"
+            class="p-6 space-y-6">
             @csrf
             @method('PUT')
 
             <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Judul</label>
-                    <input type="text" name="judul" value="{{ old('judul', $g->judul) }}" class="w-full border rounded-lg p-2.5" required>
+                    <input type="text" name="judul" value="{{ old('judul', $g->judul) }}"
+                        class="w-full border rounded-lg p-2.5" required>
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Gambar</label><br>
                     @if($g->gambar)
-                        <img src="{{ asset('storage/'.$g->gambar) }}" class="h-16 w-16 rounded mb-2 object-cover cursor-pointer"
-                             onclick="openImageModal('{{ asset('storage/'.$g->gambar) }}')">
+                    <img src="{{ asset('storage/'.$g->gambar) }}"
+                        class="h-16 w-16 rounded mb-2 object-cover cursor-pointer"
+                        onclick="openImageModal('{{ asset('storage/'.$g->gambar) }}')">
                     @endif
                     <input type="file" name="gambar" class="w-full border rounded-lg p-2.5">
                 </div>
 
                 <div class="col-span-6">
                     <label class="block mb-2 text-sm font-medium">Deskripsi</label>
-                    <textarea name="deskripsi" class="w-full border rounded-lg p-2.5">{{ old('deskripsi', $g->deskripsi) }}</textarea>
+                    <textarea name="deskripsi"
+                        class="w-full border rounded-lg p-2.5">{{ old('deskripsi', $g->deskripsi) }}</textarea>
                 </div>
             </div>
 
@@ -172,8 +164,10 @@
         document.getElementById('preview-image').src = src;
         document.getElementById('image-modal').classList.remove('hidden');
     }
+
     function closeImageModal() {
         document.getElementById('image-modal').classList.add('hidden');
     }
+
 </script>
 @endsection
