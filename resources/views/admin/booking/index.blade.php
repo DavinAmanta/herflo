@@ -5,25 +5,6 @@
     <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Kelola Booking</h1>
 </div>
 
-{{-- Pesan sukses / error --}}
-@if(session('success'))
-<div class="mb-4 p-3 rounded bg-green-100 text-green-800">{{ session('success') }}</div>
-@endif
-
-@if(session('error'))
-<div class="mb-4 p-3 rounded bg-red-100 text-red-800">{{ session('error') }}</div>
-@endif
-
-@if($errors->any())
-<div class="mb-4 p-3 rounded bg-red-50 text-red-800">
-    <ul class="list-disc pl-5">
-        @foreach($errors->all() as $err)
-            <li>{{ $err }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-
 {{-- Tabel Booking --}}
 <table class="table-fixed min-w-full divide-y divide-gray-200 shadow-sm rounded-lg overflow-hidden mt-3">
     <thead class="bg-gray-100">

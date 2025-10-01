@@ -3,30 +3,16 @@
 @section('content')
 <div class="d-flex items-center justify-between mb-4">
     <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Halaman Jadwal Kelas</h1>
-    <button type="button" onclick="openAddModal()"
-        class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2">
+    <button type="button" data-modal-toggle="add-jadwal-modal"
+        class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 mt-2">
+        <svg class="-ml-1 mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                clip-rule="evenodd"></path>
+        </svg>
         Tambah Jadwal
     </button>
 </div>
-
-{{-- Pesan --}}
-@if(session('success'))
-<div class="mb-4 p-3 rounded bg-green-100 text-green-800">{{ session('success') }}</div>
-@endif
-
-@if(session('error'))
-<div class="mb-4 p-3 rounded bg-red-100 text-red-800">{{ session('error') }}</div>
-@endif
-
-@if($errors->any())
-<div class="mb-4 p-3 rounded bg-red-50 text-red-800">
-    <ul class="list-disc pl-5">
-        @foreach($errors->all() as $err)
-            <li>{{ $err }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
 
 <table class="table-fixed min-w-full divide-y divide-gray-200 shadow-sm rounded-lg overflow-hidden mt-3">
     <thead class="bg-gray-100">
@@ -48,7 +34,8 @@
             <td class="p-4 text-sm text-gray-700">{{ $j->waktu }}</td>
             <td class="p-4 text-sm text-gray-700">{{ $j->instruktur?->user?->name ?? '-' }}</td>
             <td class="p-4 space-x-2 text-center">
-                <button type="button" onclick="openEditModal({{ $j->id }}, '{{ $j->nama_kelas }}', '{{ $j->hari }}', '{{ $j->waktu }}', {{ $j->instruktur_id ?? 'null' }})"
+                <button type="button"
+                    onclick="openEditModal({{ $j->id }}, '{{ $j->nama_kelas }}', '{{ $j->hari }}', '{{ $j->waktu }}', {{ $j->instruktur_id ?? 'null' }})"
                     class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-sm px-3 py-2">
                     Edit
                 </button>
@@ -86,7 +73,8 @@
                 @endforeach
             </select>
             <div class="flex justify-end">
-                <button type="submit" class="bg-cyan-600 text-white px-5 py-2.5 rounded hover:bg-cyan-700">Simpan</button>
+                <button type="submit"
+                    class="bg-cyan-600 text-white px-5 py-2.5 rounded hover:bg-cyan-700">Simpan</button>
             </div>
         </form>
     </div>
@@ -109,26 +97,28 @@
                 @endforeach
             </select>
             <div class="flex justify-end">
-                <button type="submit" class="bg-cyan-600 text-white px-5 py-2.5 rounded hover:bg-cyan-700">Simpan Perubahan</button>
+                <button type="submit" class="bg-cyan-600 text-white px-5 py-2.5 rounded hover:bg-cyan-700">Simpan
+                    Perubahan</button>
             </div>
         </form>
     </div>
 </div>
 
 <script>
-function openAddModal() {
-    document.getElementById('add-jadwal-modal').classList.remove('hidden');
-}
+    function openAddModal() {
+        document.getElementById('add-jadwal-modal').classList.remove('hidden');
+    }
 
-function openEditModal(id, nama_kelas, hari, waktu, instruktur_id) {
-    const form = document.getElementById('edit-jadwal-form');
-    form.action = `/admin/jadwal/${id}`; // pastikan sesuai route
-    document.getElementById('edit-nama_kelas').value = nama_kelas;
-    document.getElementById('edit-hari').value = hari;
-    document.getElementById('edit-waktu').value = waktu;
-    document.getElementById('edit-instruktur_id').value = instruktur_id ?? '';
-    document.getElementById('edit-jadwal-modal').classList.remove('hidden');
-}
+    function openEditModal(id, nama_kelas, hari, waktu, instruktur_id) {
+        const form = document.getElementById('edit-jadwal-form');
+        form.action = `/admin/jadwal/${id}`; // pastikan sesuai route
+        document.getElementById('edit-nama_kelas').value = nama_kelas;
+        document.getElementById('edit-hari').value = hari;
+        document.getElementById('edit-waktu').value = waktu;
+        document.getElementById('edit-instruktur_id').value = instruktur_id ? ? '';
+        document.getElementById('edit-jadwal-modal').classList.remove('hidden');
+    }
+
 </script>
 
 @endsection
