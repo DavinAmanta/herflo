@@ -2,27 +2,33 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DaftarController;
+use App\Http\Controllers\JadwalKelasController;
+
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\TestimoniController;
-use App\Http\Controllers\Instruktur\InstrukturController;
 use App\Http\Controllers\Admin\PendaftaranMemberController;
 use App\Http\Controllers\Admin\GaleriController as AdminGaleriController;
 use App\Http\Controllers\Admin\JadwalController as AdminJadwalController;
 use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\Admin\InstrukturController as AdminInstrukturController;
-use App\Http\Controllers\JadwalKelasController; // ✅ tambahkan ini
+
+use App\Http\Controllers\InstrukturController as FrontInstrukturController;
+use App\Http\Controllers\Instruktur\InstrukturController as InstrukturDashboardController;
 
 /*
 |--------------------------------------------------------------------------
 | Guest (belum login) & General Routes
 |--------------------------------------------------------------------------
 */
-
 Route::get('/', function () {
     return view('user.home');
 })->name('home');
+
+Route::resource('/daftar', DaftarController::class);
+Route::resource('/trainer', FrontInstrukturController::class); // ✅ untuk user publik
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -40,16 +46,10 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    // Hanya admin bisa kelola galeri
     Route::middleware(['role:admin'])->group(function () {
         Route::resource('/galeri', AdminGaleriController::class);
     });
 
-    // Hapus resource instruktur & jadwal dari luar → supaya tidak bentrok
-    // Route::resource('/instruktur', InstrukturController::class);
-    // Route::resource('/jadwal', JadwalKelasController::class);
-
-    // Dashboard universal
     Route::get('/dashboard', function () {
         $user = auth()->user();
         if ($user->role === 'admin') {
@@ -91,10 +91,10 @@ Route::middleware(['auth', 'role:member'])->prefix('member')->name('member.')->g
 |--------------------------------------------------------------------------
 */
 Route::prefix('instruktur')->middleware(['auth', 'role:instruktur'])->group(function () {
-    Route::get('/dashboard', [InstrukturController::class, 'dashboard'])->name('instruktur.dashboard');
-    Route::get('/jadwal', [InstrukturController::class, 'jadwal'])->name('instruktur.jadwal');
-    Route::get('/jadwal/{id}/booking', [InstrukturController::class, 'booking'])->name('instruktur.jadwal.booking');
-    Route::post('/jadwal/{id}/kehadiran', [InstrukturController::class, 'updateKehadiran'])->name('instruktur.kehadiran.update');
+    Route::get('/dashboard', [InstrukturDashboardController::class, 'dashboard'])->name('instruktur.dashboard');
+    Route::get('/jadwal', [InstrukturDashboardController::class, 'jadwal'])->name('instruktur.jadwal');
+    Route::get('/jadwal/{id}/booking', [InstrukturDashboardController::class, 'booking'])->name('instruktur.jadwal.booking');
+    Route::post('/jadwal/{id}/kehadiran', [InstrukturDashboardController::class, 'updateKehadiran'])->name('instruktur.kehadiran.update');
 });
 
 /*

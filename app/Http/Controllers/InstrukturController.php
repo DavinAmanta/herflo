@@ -13,12 +13,12 @@ class InstrukturController extends Controller
     public function index()
     {
         $instruktur = Instruktur::with('user')->get();
-        return view('admin.instruktur', compact('instruktur'));
+        return view('user.trainer', compact('instruktur'));
     }
 
     public function create()
     {
-        //
+        return view('admin.instruktur.create');
     }
 
     public function store(Request $request)
@@ -30,43 +30,33 @@ class InstrukturController extends Controller
             'alamat'  => 'required|string',
             'biaya'   => 'required|string',
             'foto'    => 'required|mimes:jpg,jpeg,png|max:2048'
-        ], [
-            'name.required' => 'Nama wajib diisi',
-            'email.required' => 'Email wajib diisi',
-            'email.email' => 'Email tidak valid',
-            'email.unique' => 'Email sudah terdaftar',
-            'no_hp.required' => 'No. HP wajib diisi',
-            'alamat.required' => 'Alamat wajib diisi',
-            'biaya.required' => 'Biaya wajib diisi',
-            'foto.required' => 'Foto wajib diisi',
-            'foto.mimes' => 'File yang diunggah harus berupa gambar dengan format: jpg, jpeg, png',
-            'foto.max' => 'Ukuran file gambar maksimal 2MB' 
         ]);
-        $fotoPath = $request->file('foto')->store('instruktur', 'public');
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => md5('password'),
-            'no_hp' => $request->no_hp,
-            'alamat' => $request->alamat,
-            'role' => 'instruktur'
-        ]);
-        Instruktur::create([
-            'id_user' => User::latest()->first()->id,
-            'biaya' => $request->biaya,
-            'foto' => $fotoPath
-        ]);
-        return redirect()->back()->with('success', 'Instruktur berhasil ditambahkan');
-    }
 
-    public function show(string $id)
-    {
-        //
+        $fotoPath = $request->file('foto')->store('instruktur', 'public');
+
+        // ✅ langsung simpan dan ambil id user
+        $user = User::create([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => Hash::make('password'), // lebih aman
+            'no_hp'    => $request->no_hp,
+            'alamat'   => $request->alamat,
+            'role'     => 'instruktur'
+        ]);
+
+        Instruktur::create([
+            'id_user' => $user->id,
+            'biaya'   => $request->biaya,
+            'foto'    => $fotoPath
+        ]);
+
+        return redirect()->back()->with('success', 'Instruktur berhasil ditambahkan');
     }
 
     public function edit(string $id)
     {
-        //
+        $instruktur = Instruktur::with('user')->findOrFail($id);
+        return view('admin.instruktur.edit', compact('instruktur'));
     }
 
     public function update(Request $request, string $id)
@@ -77,43 +67,49 @@ class InstrukturController extends Controller
             'alamat'  => 'required|string',
             'biaya'   => 'required|string',
             'foto'    => 'nullable|mimes:jpg,jpeg,png|max:2048'
-        ], [
-            'name.required' => 'Nama wajib diisi',
-            'no_hp.required' => 'No. HP wajib diisi',
-            'alamat.required' => 'Alamat wajib diisi',
-            'biaya.required' => 'Biaya wajib diisi',
-            'foto.mimes' => 'File yang diunggah harus berupa gambar dengan format: jpg, jpeg, png',
-            'foto.max' => 'Ukuran file gambar maksimal 2MB' 
         ]);
+
         $instruktur = Instruktur::findOrFail($id);
+
+        // ✅ Update foto jika ada
         if ($request->hasFile('foto')) {
-            Storage::delete('public/'.$instruktur->foto);
+            if ($instruktur->foto && Storage::disk('public')->exists($instruktur->foto)) {
+                Storage::disk('public')->delete($instruktur->foto);
+            }
             $fotoPath = $request->file('foto')->store('instruktur', 'public');
             $instruktur->update([
                 'biaya' => $request->biaya,
-                'foto' => $fotoPath
+                'foto'  => $fotoPath
             ]);
         } else {
             $instruktur->update([
                 'biaya' => $request->biaya
             ]);
         }
+
+        // ✅ Update data user terkait
         $user = User::findOrFail($instruktur->id_user);
         $user->update([
-            'name' => $request->name,
-            'no_hp' => $request->no_hp,
+            'name'   => $request->name,
+            'no_hp'  => $request->no_hp,
             'alamat' => $request->alamat
         ]);
+
         return redirect()->back()->with('success', 'Instruktur berhasil diupdate');
     }
 
     public function destroy(string $id)
     {
         $instruktur = Instruktur::findOrFail($id);
-        Storage::delete('public/'.$instruktur->foto);
+
+        if ($instruktur->foto && Storage::disk('public')->exists($instruktur->foto)) {
+            Storage::disk('public')->delete($instruktur->foto);
+        }
+
         $user = User::findOrFail($instruktur->id_user);
         $user->delete();
         $instruktur->delete();
+
         return redirect()->back()->with('success', 'Instruktur berhasil dihapus');
     }
 }

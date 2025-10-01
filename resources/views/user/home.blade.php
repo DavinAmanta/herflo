@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -205,6 +206,8 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
+@extends('user.layout.member')
+@section('konten')
     <section class="bg-gradient-to-r from-white via-[#fdf9f7] to-[#f8f4f1] pt-28 lg:pt-32">
         <div class="container mx-auto px-6 lg:px-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -366,105 +369,4 @@
             </div>
         </div>
     </section>
-
-    <footer class="bg-[#C5A08A] pt-16 pb-10 mt-16 text-white">
-        <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div class="fade-in-up">
-                <h4 class="font-bold text-3xl mb-5">HerFlo</h4>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.0599909379305!2d110.95986325624764!3d-7.5971659244119305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a19004b4ef1f5%3A0x68889f4e4d43230!2sHer%20Flo!5e0!3m2!1sid!2sid!4v1755746348658!5m2!1sid!2sid"
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
-            </div>
-            <div class="fade-in-up">
-                <h4 class="font-semibold text-2xl mb-5">Explore</h4>
-                <ul class="space-y-3 text-base">
-                    <li><a href="#" class="hover:underline hover:opacity-90 transition">About</a></li>
-                    <li><a href="#" class="hover:underline hover:opacity-90 transition">Classes</a></li>
-                    <li><a href="#" class="hover:underline hover:opacity-90 transition">Services</a></li>
-                    <li><a href="#" class="hover:underline hover:opacity-90 transition">Articles</a></li>
-                </ul>
-            </div>
-            <div class="fade-in-up">
-                <h4 class="font-semibold text-2xl mb-5">Contact Us</h4>
-                <p class="text-base opacity-90">📧 info@herflo.com</p>
-                <p class="text-base opacity-90">📞 +62 811 2345 6789</p>
-            </div>
-            <div class="fade-in-up">
-                <h4 class="font-semibold text-2xl mb-5">Follow Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#"
-                        class="w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#C5A08A] shadow hover-scale">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                            <path
-                                d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.797.715-1.797 1.764v2.312h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#C5A08A] shadow hover-scale">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.262 2.242 1.324 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.262-3.608 1.324-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.262-2.242-1.324-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.262 3.608-1.324C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.17 0-3.548.012-4.796.07-1.042.048-1.61.218-1.982.363-.5.194-.86.426-1.237.803-.377.377-.61.737-.804 1.237-.145.372-.315.94-.363 1.982-.058 1.248-.07 1.626-.07 4.796s.012 3.548.07 4.796c.048 1.042.218 1.61.363 1.982.194.5.426.86.803 1.237.377.377.737.61 1.237.804.372.145.94.315 1.982.363 1.248.058 1.626.07 4.796.07s3.548-.012 4.796-.07c1.042-.048 1.61-.218 1.982-.363.194-.5.426-.86.803-1.237.377-.377.61-.737.804-1.237.145-.372.315-.94.363-1.982.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.048-1.042-.218-1.61-.363-1.982-.194-.5-.426-.86-.803-1.237-.377-.377-.737-.61-1.237-.804-.372-.145-.94-.315-1.982-.363-1.248-.058-1.626-.07-4.796-.07zm0 3.905a5.935 5.935 0 110 11.87 5.935 5.935 0 010-11.87zm0 9.797a3.862 3.862 0 100-7.724 3.862 3.862 0 000 7.724zm7.842-10.705a1.387 1.387 0 11-2.774 0 1.387 1.387 0 012.774 0z" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#C5A08A] shadow hover-scale">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                            <path
-                                d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.555-2.005.959-3.127 1.184a4.916 4.916 0 00-8.384 4.482A13.94 13.94 0 011.671 3.149a4.916 4.916 0 001.523 6.574 4.897 4.897 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.919 4.919 0 004.588 3.417A9.867 9.867 0 010 19.54a13.94 13.94 0 007.548 2.212c9.056 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="mt-14 text-center">
-            <h3 class="text-2xl font-bold tracking-wide mb-3 fade-in">🕒 Jam Operasional</h3>
-            <div class="space-y-2 text-base font-medium opacity-95 fade-in">
-                <p><span class="font-semibold">Morning Flo</span> — 07:00 to 12:00 WIB</p>
-                <p><span class="font-semibold">Evening Flo</span> — 15:00 to 20:00 WIB</p>
-            </div>
-        </div>
-        <div class="mt-12 border-t border-white/30 pt-6 text-center text-base opacity-90 fade-in">
-            © 2025 HerFlo Gym. All rights reserved.
-        </div>
-    </footer>
-
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("mobile-menu");
-        toggle.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const loadElements = document.querySelectorAll(".animate-on-load");
-            loadElements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.classList.add("is-visible");
-                }, index * 100);
-            });
-        });
-        const faders = document.querySelectorAll(".fade-in, .fade-in-up, .scale-in");
-        const staggeredItems = document.querySelectorAll(".staggered-item");
-        const appearOptions = {
-            threshold: 0.2,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add("is-visible");
-                    }, index * 100); // Staggered delay for grid items
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => appearOnScroll.observe(fader));
-        staggeredItems.forEach(item => appearOnScroll.observe(item));
-    </script>
-</body>
-
-</html>
+@endsection
