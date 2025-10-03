@@ -37,7 +37,6 @@ class AuthController extends Controller
                 return redirect()->route('admin.dashboard');
             } elseif ($role === 'instruktur') {
                 return redirect()->route('instruktur.dashboard');
-
             }
             return redirect()->route('home');
         }
@@ -61,7 +60,7 @@ class AuthController extends Controller
         $request->validate([
             'name'     => 'required|string|max:100',
             'email'    => 'required|email|unique:users,email',
-            'password' => 'required|min:5|confirmed',
+            'password' => 'required|',
         ]);
 
         $user = User::create([

@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\InstrukturController as AdminInstrukturController
 
 use App\Http\Controllers\InstrukturController as FrontInstrukturController;
 use App\Http\Controllers\Instruktur\InstrukturController as InstrukturDashboardController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('/daftar', DaftarController::class);
-Route::resource('/trainer', FrontInstrukturController::class); // ✅ untuk user publik
+Route::resource('/trainer', FrontInstrukturController::class); 
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -59,7 +60,7 @@ Route::middleware('auth')->group(function () {
         } elseif ($user->role === 'member') {
             return redirect()->route('member.dashboard');
         } else {
-            return redirect()->route('user.dashboard');
+            return redirect()->route('home');
         }
     })->name('dashboard');
 });
@@ -80,9 +81,16 @@ Route::middleware(['auth', 'role:user'])->prefix('user')->name('user.')->group(f
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth', 'role:member'])->prefix('member')->name('member.')->group(function () {
-    Route::get('/dashboard', [AdminMemberController::class, 'index'])->name('dashboard');
+    Route::get('/', function () {return view('user.home');})->name('home');
     Route::post('/booking', [AdminMemberController::class, 'bookingKelas'])->name('booking');
     Route::post('/testimoni', [AdminMemberController::class, 'kirimTestimoni'])->name('testimoni');
+
+    Route::get('/pilih_jadwal/{id}',[TransaksiController::class,'index'])->name('pilih_jadwal');
+    Route::get('/booking_saya',[TransaksiController::class,'dataBooking'])->name('booking_saya');
+    Route::get('/booking/{id}', [TransaksiController::class, 'booking'])->name('booking.create');
+    Route::post('/jadwal/store', [TransaksiController::class, 'store'])->name('booking.store');
+    Route::get('/payment/{id}', [TransaksiController::class, 'payment'])->name('payment.index');
+    Route::post('/payment/process', [TransaksiController::class, 'process'])->name('payment.process');
 });
 
 /*
@@ -115,8 +123,8 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::resource('jadwal', AdminJadwalController::class);
     Route::resource('booking', AdminBookingController::class);
 
-    Route::patch('booking/{booking}/approve', [AdminBookingController::class, 'approve'])->name('booking.approve');
-    Route::patch('booking/{booking}/reject', [AdminBookingController::class, 'reject'])->name('booking.reject');
+    Route::put('booking/{booking}/approve', [AdminBookingController::class, 'approve'])->name('booking.approve');
+    Route::put('booking/{booking}/reject', [AdminBookingController::class, 'reject'])->name('booking.reject');
 
     Route::resource('galeri', AdminGaleriController::class);
     Route::resource('testimoni', TestimoniController::class)->only(['index','destroy']);

@@ -157,12 +157,11 @@
         <nav class="container mx-auto flex justify-between items-center px-4 py-4 lg:py-6">
             <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">HerFlo</div>
             <div class="hidden lg:flex space-x-8 text-base font-medium">
-                <a href="{{ route('home') }}" class="hover:text-[#7d6b60] transition-colors animate-on-load">About
-                    Us</a>
+                <a href="{{ route('home') }}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Home</a>
                 <a href="{{ route('daftar.index') }}"
                     class="hover:text-[#7d6b60] transition-colors animate-on-load">Membership</a>
                 <a href="{{ route('trainer.index')}}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Personal Trainer</a>
-                <a href="#" class="hover:text-[#7d6b60] transition-colors animate-on-load">Subject</a>
+                <a href="{{ route('member.booking_saya')}}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Data Booking</a>
             </div>
             <div class="hidden lg:flex items-center space-x-4">
                 @guest
@@ -193,7 +192,8 @@
                 class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Membership</a>
             <a href="{{ route('trainer.index')}}" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Personal
                 Trainer</a>
-            <a href="#" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Subject</a>
+            <a href="{{ route('member.booking_saya')}}" class="py-2 hover:bg-gray-100 rounded-lg px-4 transition-colors animate-on-load">Personal
+                Data Booking</a>
             @guest
             <a href="{{ route('login') }}" class="btn-custom inline-block text-center mt-4 animate-on-load">Free
                 Trial</a>

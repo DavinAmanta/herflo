@@ -23,7 +23,7 @@ class JadwalController extends Controller
             'nama_kelas'    => 'required|string|max:255',
             'hari'          => 'required|string|max:50',
             'waktu'         => 'required',
-            'instruktur_id' => 'nullable|exists:instruktur,id',
+            'instruktur_id' => 'nullable|exists:instrukturs,id',
         ]);
 
         JadwalKelas::create($request->only(['nama_kelas','hari','waktu','instruktur_id']));

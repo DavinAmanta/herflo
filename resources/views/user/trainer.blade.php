@@ -144,6 +144,7 @@
 
 </style>
 </head>
+
 <body class="bg-[#f8f4f1] text-gray-800">
     <section class="pt-28 lg:pt-40 pb-20 bg-gradient-to-br from-white via-[#fdf9f7] to-[#f8f4f1]">
         <div class="container mx-auto px-6 lg:px-16">
@@ -263,56 +264,69 @@
         </div>
     </section>
 
-<!-- Trainers Section -->
-<section id="trainers" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 lg:px-16">
-        <!-- Section Header -->
-        <div class="text-center mb-12 fade-in-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#7d6b60] mb-4">Meet Our Professional Trainers</h2>
-            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                Tim trainer berpengalaman siap membimbing Anda mencapai tujuan kebugaran dengan metode yang aman dan efektif.
-            </p>
-        </div>
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-16">
+            <!-- Section Header -->
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#7d6b60] mb-4">Meet Our Professional Trainers</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Tim trainer berpengalaman siap membimbing Anda mencapai tujuan kebugaran dengan metode yang aman dan
+                    efektif.
+                </p>
+            </div>
 
-        <!-- Trainers Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            @foreach($instruktur as $instructor)
-                <div class="trainer-card bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 staggered-item">
+            <!-- Trainers Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                @foreach($instrukturs as $instruktur)
+                <div
+                    class="trainer-card bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 staggered-item">
                     <!-- Trainer Image -->
-                    <div class="overflow-hidden rounded-t-lg">
-                        <img src="{{ $instructor->foto ? asset('storage/' . $instructor->foto) : asset('assets/gym_foto/placeholder.jpg') }}"
-                             alt="{{ $instructor->user->name }}"
-                             class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105">
-                    </div>
+                    <div class="overflow-hidden rounded-t-lg flex items-center justify-center bg-gray-100">
+    <img src="{{ $instruktur->foto 
+            ? asset('uploads/instrukturs/' . $instruktur->foto) 
+            : asset('assets/gym_foto/placeholder.jpg') }}" 
+        alt="{{ $instruktur->user->name }}"
+        class="w-full max-h-64 object-contain transition-transform duration-300 hover:scale-105">
+</div>
+
                     <!-- Trainer Details -->
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-semibold text-[#7d6b60]">{{ $instructor->user->name }}</h3>
+                                <h3 class="text-xl font-semibold text-[#7d6b60]">
+                                    {{ $instruktur->user->name }}
+                                </h3>
                                 <p class="text-sm text-gray-500">Fitness Coach</p>
                             </div>
                             <div class="flex space-x-2">
-                                <span class="specialty-badge bg-[#D3A796] text-white text-xs font-medium px-2 py-1 rounded">
+                                <span
+                                    class="specialty-badge bg-[#D3A796] text-white text-xs font-medium px-2 py-1 rounded">
                                     General Fitness
                                 </span>
                             </div>
                         </div>
+
                         <!-- Trainer Info -->
                         <div class="text-sm text-gray-600 space-y-2 mb-4">
-                            <p><span class="font-medium">Kontak:</span> {{ $instructor->no_hp ?? 'Tidak tersedia' }}</p>
-                            <p><span class="font-medium">Alamat:</span> {{ $instructor->alamat ?? 'Tidak tersedia' }}</p>
-                            <p><span class="font-medium">Biaya:</span> Rp {{ number_format($instructor->biaya ?? 0, 2, ',', '.') }} per sesi</p>
+                            <p><span class="font-medium">Kontak:</span> {{ $instruktur->no_hp ?? 'Tidak tersedia' }}</p>
+                            <p><span class="font-medium">Alamat:</span> {{ $instruktur->alamat ?? 'Tidak tersedia' }}
+                            </p>
+                            <p><span class="font-medium">Biaya:</span> Rp
+                                {{ number_format($instruktur->biaya ?? 0, 2, ',', '.') }} / sesi</p>
                         </div>
                         <!-- Action Button -->
-                        <button class="w-full py-2 bg-[#7d6b60] text-white text-sm font-medium rounded-md hover:bg-[#D3A796] transition-colors duration-300">
+                        <a href="{{ route('member.pilih_jadwal', $instruktur->id) }}"
+                            class="w-full block text-center py-2 bg-[#7d6b60] text-white text-sm font-medium rounded-md hover:bg-[#D3A796] transition-colors duration-300">
                             Pilih Trainer
-                        </button>
+                        </a>
                     </div>
                 </div>
-            @endforeach
+                @endforeach
+            </div>
+
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- CTA Section -->
     <section class="py-16 bg-gradient-to-r from-[#D3A796] to-[#C5A08A] text-white">

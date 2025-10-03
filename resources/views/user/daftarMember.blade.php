@@ -49,8 +49,8 @@
                 </div>
             </section>
 
-
-
+            
+{{-- 
             <section>
                 <h2 class="text-center text-4xl font-bold text-[#7d6b60] mb-12 fade-in-up">
                     Pilih Paket Keanggotaanmu
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
         </div>
     </main>
 </body>

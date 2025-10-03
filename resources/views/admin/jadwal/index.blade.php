@@ -64,7 +64,17 @@
         <form action="{{ route('admin.jadwal.store') }}" method="POST" class="space-y-4">
             @csrf
             <input type="text" name="nama_kelas" placeholder="Nama Kelas" class="w-full border rounded p-2.5" required>
-            <input type="text" name="hari" placeholder="Hari" class="w-full border rounded p-2.5" required>
+            <select name="hari" class="w-full border rounded p-2.5" required>
+                <option value="" disabled selected>Pilih Hari</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+                <option value="Minggu">Minggu</option>
+            </select>
+
             <input type="time" name="waktu" class="w-full border rounded p-2.5" required>
             <select name="instruktur_id" class="w-full border rounded p-2.5">
                 <option value="">-- Pilih Instruktur --</option>
@@ -88,7 +98,17 @@
             @csrf
             @method('PUT')
             <input type="text" name="nama_kelas" id="edit-nama_kelas" class="w-full border rounded p-2.5" required>
-            <input type="text" name="hari" id="edit-hari" class="w-full border rounded p-2.5" required>
+            <select name="hari" class="w-full border rounded p-2.5" required>
+                <option value="" disabled selected>Pilih Hari</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+                <option value="Minggu">Minggu</option>
+            </select>
+
             <input type="time" name="waktu" id="edit-waktu" class="w-full border rounded p-2.5" required>
             <select name="instruktur_id" id="edit-instruktur_id" class="w-full border rounded p-2.5">
                 <option value="">-- Pilih Instruktur --</option>

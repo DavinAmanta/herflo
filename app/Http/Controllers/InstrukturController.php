@@ -12,8 +12,8 @@ class InstrukturController extends Controller
 {
     public function index()
     {
-        $instruktur = Instruktur::with('user')->get();
-        return view('user.trainer', compact('instruktur'));
+        $instrukturs = Instruktur::with('user')->get();
+        return view('user.trainer', compact('instrukturs'));
     }
 
     public function create()

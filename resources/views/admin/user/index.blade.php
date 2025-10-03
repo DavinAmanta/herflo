@@ -1,5 +1,4 @@
 @extends('layout.main')
-
 @section('content')
 <div class="d-flex items-center justify-between mb-4">
     <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Halaman User</h1>

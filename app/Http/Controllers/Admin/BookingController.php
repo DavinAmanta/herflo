@@ -13,7 +13,8 @@ class BookingController extends Controller
     public function index()
     {
         $bookings = Booking::with(['member', 'jadwalKelas'])->latest()->get();
-        return view('admin.booking.index', compact('bookings'));
+        $jadwalKelas = JadwalKelas::all();
+        return view('admin.booking.index', compact('bookings','jadwalKelas'));
     }
 
     public function create()

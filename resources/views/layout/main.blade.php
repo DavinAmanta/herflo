@@ -401,7 +401,7 @@
                                         <span class="ml-3">Kelola Booking</span>
                                     </a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="{{ route('admin.galeri.index') }}"
                                         class="flex items-center p-2 text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group">
                                         <svg class="w-6 h-6 text-gray-700 group-hover:text-gray-900" fill="currentColor"
@@ -416,7 +416,7 @@
                                             viewBox="0 0 24 24"><path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm1 17h-2v-2h2v2zm0-4h-2V7h2v7z"/></svg>
                                         <span class="ml-3">Kelola Testimoni</span>
                                     </a>
-                                </li>
+                                </li> --}}
                             @endif
                         </ul>
                     </div>

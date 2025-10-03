@@ -13,6 +13,13 @@ class Booking extends Model
 
     protected $table = 'booking';
     protected $guarded = ['id'];
+    protected $fillable = [
+        'member_id',
+        'jadwal_kelas_id',
+        'tanggal',
+        'status',
+        'status_bayar',
+    ];
 
     // Relasi ke Member (booking ini milik satu member)
     public function member()
