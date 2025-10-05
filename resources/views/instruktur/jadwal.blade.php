@@ -35,7 +35,7 @@
             <td class="p-4 text-center space-x-2">
                 <a href="{{ route('instruktur.jadwal.booking', $jadwal->id) }}"
                    class="text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2">
-                   Lihat Booking
+                   Lihat Member
                 </a>
             </td>
         </tr>

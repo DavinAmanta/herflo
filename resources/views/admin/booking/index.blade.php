@@ -47,8 +47,8 @@
 
                             {{-- Edit --}}
                             {{-- <button type="button" data-modal-toggle="edit-booking-modal-{{ $b->id }}"
-                                class="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-3 py-1.5 text-xs transition">
-                                Edit
+                            class="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-3 py-1.5 text-xs transition">
+                            Edit
                             </button> --}}
 
                             {{-- Approve / Reject --}}
@@ -71,46 +71,95 @@
                             @endif
 
                             {{-- Hapus --}}
-                            {{-- <form action="{{ route('admin.booking.destroy', $b->id) }}" method="POST" class="inline">
-                                @csrf @method('DELETE')
-                                <button type="submit" onclick="return confirm('Yakin ingin menghapus data ini?')"
-                                    class="bg-gray-600 hover:bg-gray-700 text-white rounded-lg px-3 py-1.5 text-xs transition">
-                                    Hapus
-                                </button>
+                            {{-- <form action="{{ route('admin.booking.destroy', $b->id) }}" method="POST"
+                            class="inline">
+                            @csrf @method('DELETE')
+                            <button type="submit" onclick="return confirm('Yakin ingin menghapus data ini?')"
+                                class="bg-gray-600 hover:bg-gray-700 text-white rounded-lg px-3 py-1.5 text-xs transition">
+                                Hapus
+                            </button>
                             </form> --}}
                         </td>
                     </tr>
 
                     {{-- Modal Detail --}}
                     <div id="detail-booking-modal-{{ $b->id }}"
-                        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                        <div class="bg-white rounded-xl shadow-lg w-full max-w-lg transform transition-all">
-                            <div class="flex items-center justify-between p-5 border-b">
-                                <h3 class="text-lg font-semibold text-gray-800">Detail Booking</h3>
+                        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden transform transition-all">
+                            <!-- Header -->
+                            <div class="bg-cyan-600 text-white px-5 py-3 flex justify-between items-center">
+                                <h3 class="text-base font-semibold">Detail Booking</h3>
                                 <button type="button" data-modal-toggle="detail-booking-modal-{{ $b->id }}"
-                                    class="text-gray-500 hover:text-gray-700">✕</button>
+                                    class="text-white/70 hover:text-white transition">✕</button>
                             </div>
-                            <div class="p-6 space-y-3 text-sm text-gray-700">
-                                <p><strong>Member:</strong> {{ $b->member->user->name ?? '-' }}</p>
-                                <p><strong>Email:</strong> {{ $b->member->user->email ?? '-' }}</p>
-                                <p><strong>No HP:</strong> {{ $b->member->no_hp ?? '-' }}</p>
-                                <p><strong>Kelas:</strong> {{ $b->jadwalKelas->nama_kelas ?? '-' }}</p>
-                                <p><strong>Tanggal:</strong> {{ $b->tanggal }}</p>
-                                <p><strong>Status:</strong>
-                                    @if($b->status == 'pending')
-                                    <span
-                                        class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-medium">Pending</span>
-                                    @elseif($b->status == 'approved')
-                                    <span
-                                        class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">Approved</span>
-                                    @else
-                                    <span
-                                        class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-medium">Rejected</span>
-                                    @endif
-                                </p>
+
+                            <!-- Body -->
+                            <div class="p-6 space-y-5 text-gray-800 text-sm">
+                                <!-- Informasi Member -->
+                                <div>
+                                    <h4 class="font-semibold text-cyan-700 mb-2 flex items-center gap-2">
+                                        🧍 Data Member
+                                    </h4>
+                                    <div class="grid grid-cols-2 gap-y-2">
+                                        <p class="text-gray-500">Nama</p>
+                                        <p class="font-medium text-gray-800">{{ $b->member->user->name ?? '-' }}</p>
+
+                                        <p class="text-gray-500">Email</p>
+                                        <p class="font-medium text-gray-800">{{ $b->member->user->email ?? '-' }}</p>
+
+                                        <p class="text-gray-500">No HP</p>
+                                        <p class="font-medium text-gray-800">{{ $b->member->no_hp ?? '-' }}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Informasi Kelas -->
+                                <div>
+                                    <h4 class="font-semibold text-cyan-700 mb-2 flex items-center gap-2">
+                                        💪 Kelas yang Dipesan
+                                    </h4>
+                                    <div class="grid grid-cols-2 gap-y-2">
+                                        <p class="text-gray-500">Nama Kelas</p>
+                                        <p class="font-medium text-gray-800">{{ $b->jadwalKelas->nama_kelas ?? '-' }}
+                                        </p>
+
+                                        <p class="text-gray-500">Tanggal</p>
+                                        <p class="font-medium text-gray-800">
+                                            {{ \Carbon\Carbon::parse($b->tanggal)->format('d M Y') }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Status Booking -->
+                                <div>
+                                    <h4 class="font-semibold text-cyan-700 mb-2 flex items-center gap-2">
+                                        📅 Status Booking
+                                    </h4>
+                                    <div class="flex items-center gap-3">
+                                        @if($b->status == 'pending')
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-medium">Pending</span>
+                                        @elseif($b->status == 'approved')
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">Approved</span>
+                                        @else
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-medium">Rejected</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="bg-gray-50 px-5 py-3 flex justify-end">
+                                <button type="button" data-modal-toggle="detail-booking-modal-{{ $b->id }}"
+                                    class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg text-sm transition">
+                                    Tutup
+                                </button>
                             </div>
                         </div>
                     </div>
+
 
                     {{-- Modal Edit --}}
                     <div id="edit-booking-modal-{{ $b->id }}"

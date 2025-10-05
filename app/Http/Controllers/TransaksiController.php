@@ -87,6 +87,6 @@ class TransaksiController extends Controller
         $booking->update([
             'status_bayar' => 'lunas',
         ]);
-        return redirect()->route('member.dashboard')->with('success', 'Pembayaran berhasil!');
+        return redirect()->route('member.booking_saya')->with('success', 'Pembayaran berhasil!');
     }
 }

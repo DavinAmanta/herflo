@@ -14,8 +14,8 @@
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">No</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Nama Member</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
-            <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Status Kehadiran</th>
-            <th class="p-4 text-center text-xs font-medium text-gray-500 uppercase">Aksi</th>
+            {{-- <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Status Kehadiran</th>
+            <th class="p-4 text-center text-xs font-medium text-gray-500 uppercase">Aksi</th> --}}
         </tr>
     </thead>
     <tbody class="bg-white divide-y divide-gray-200">
@@ -24,8 +24,8 @@
             <td class="p-4 text-sm font-medium text-gray-900">{{ $loop->iteration }}</td>
             <td class="p-4 text-sm text-gray-700">{{ $booking->member->user->name ?? '-' }}</td>
             <td class="p-4 text-sm text-gray-700">{{ $booking->member->user->email ?? '-' }}</td>
-            <td class="p-4 text-sm text-gray-700">{{ $booking->status_kehadiran ?? 'Belum Diisi' }}</td>
-            <td class="p-4 text-center">
+            {{-- <td class="p-4 text-sm text-gray-700">{{ $booking->status_kehadiran ?? 'Belum Diisi' }}</td> --}}
+            {{-- <td class="p-4 text-center">
                 <form action="{{ route('instruktur.booking.update', $jadwal->id) }}" method="POST">
                     @csrf
                     <select name="kehadiran[{{ $booking->id }}]" class="border rounded p-1 text-sm">
@@ -36,7 +36,7 @@
                         Simpan
                     </button>
                 </form>
-            </td>
+            </td> --}}
         </tr>
         @empty
         <tr>

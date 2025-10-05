@@ -350,13 +350,13 @@
                                 <button class="btn-outline" onclick="cancelBooking({{ $booking->id }})">
                                     Batalkan
                                 </button>
-                            @elseif($booking->status === 'approved' && $booking->status_bayar === 'lunas')
+                            {{-- @elseif($booking->status === 'approved' && $booking->status_bayar === 'lunas')
                                 <button class="btn-secondary" onclick="showClassDetails({{ $booking->id }})">
                                     Detail Kelas
                                 </button>
                                 <button class="btn-outline" onclick="downloadInvoice({{ $booking->id }})">
                                     Download Invoice
-                                </button>
+                                </button> --}}
                             @elseif($booking->status === 'rejected')
                                 <button class="btn-outline" onclick="rebookClass({{ $booking->id }})">
                                     Booking Ulang

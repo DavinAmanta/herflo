@@ -20,6 +20,8 @@
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Nama</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Biaya</th>
+            <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">No HP</th>
+            <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Alamat</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Foto</th>
             <th class="p-4 text-left text-xs font-medium text-gray-500 uppercase">Tanggal Daftar</th>
             <th class="p-4 text-center text-xs font-medium text-gray-500 uppercase">Aksi</th>
@@ -32,6 +34,8 @@
             <td class="p-4 text-sm font-medium text-gray-900">{{ $i->user->name }}</td>
             <td class="p-4 text-sm text-gray-700">{{ $i->user->email }}</td>
             <td class="p-4 text-sm text-gray-700">Rp {{ number_format($i->biaya,0,',','.') }}</td>
+            <td class="p-4 text-sm text-gray-700">{{ $i->no_hp }}</td>
+            <td class="p-4 text-sm text-gray-700">{{ $i->alamat }}</td>
             <td class="p-4 text-sm text-gray-700">
                 <img src="{{ asset('uploads/instrukturs/'.$i->foto) }}" alt="foto" class="h-12 w-12 rounded-full">
             </td>
@@ -89,6 +93,14 @@
                     <input type="text" name="biaya" value="{{ old('biaya') }}" class="w-full border rounded-lg p-2.5" required>
                 </div>
                 <div class="col-span-6 sm:col-span-3">
+                    <label class="block mb-2 text-sm font-medium">No Hp</label>
+                    <input type="text" name="no_hp" value="{{ old('no_hp') }}" class="w-full border rounded-lg p-2.5" required>
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <label class="block mb-2 text-sm font-medium">Alamat</label>
+                    <input type="text" name="alamat" value="{{ old('alamat') }}" class="w-full border rounded-lg p-2.5" required>
+                </div>
+                <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Foto</label>
                     <input type="file" name="foto" class="w-full border rounded-lg p-2.5" required>
                 </div>
@@ -128,6 +140,14 @@
                 <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Biaya</label>
                     <input type="text" name="biaya" value="{{ old('biaya', $i->biaya) }}" class="w-full border rounded-lg p-2.5" required>
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <label class="block mb-2 text-sm font-medium">No Hp</label>
+                    <input type="text" name="no_hp" value="{{ old('no_hp', $i->no_hp) }}" class="w-full border rounded-lg p-2.5" required>
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <label class="block mb-2 text-sm font-medium">Alamat</label>
+                    <input type="text" name="alamat" value="{{ old('alamat', $i->alamat) }}" class="w-full border rounded-lg p-2.5" required>
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <label class="block mb-2 text-sm font-medium">Foto (kosongkan jika tidak diubah)</label>

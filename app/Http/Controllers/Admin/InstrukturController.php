@@ -25,10 +25,14 @@ class InstrukturController extends Controller
             'email'    => 'required|email|unique:users,email',
             'password' => 'required',
             'biaya'    => 'required|numeric',
+            'no_hp' => 'required',
+            'alamat' => 'required',
             'foto'     => 'required|mimes:jpg,jpeg,png|max:2048',
         ],[
             'name.required'     => 'Nama wajib diisi.',
             'email.required'    => 'Email wajib diisi.',
+            'no_hp.required'  => 'No Hp wajib diisi.',
+            'alamat.required'  => 'Alamat wajib diisi.',
             'email.email'       => 'Format email tidak valid.',
             'email.unique'      => 'Email sudah digunakan, silakan pakai email lain.',
             'password.required' => 'Password wajib diisi.',
@@ -52,6 +56,8 @@ class InstrukturController extends Controller
         Instruktur::create([
             'id_user' => $user->id,
             'biaya'   => $request->biaya,
+            'no_hp'   => $request->no_hp,
+            'alamat'   => $request->alamat,
             'foto'    => $fotoName,
         ]);
 
@@ -62,10 +68,14 @@ class InstrukturController extends Controller
     {
         $request->validate([
             'name'  => 'required|string|max:100',
+            'no_hp' => 'required',
+            'alamat' => 'required',
             'biaya' => 'required|numeric',
             'foto'  => 'nullable|mimes:jpg,jpeg,png|max:2048',
         ],[
             'name.required'  => 'Nama wajib diisi.',
+            'no_hp.required'  => 'No Hp wajib diisi.',
+            'alamat.required'  => 'Alamat wajib diisi.',
             'biaya.required' => 'Biaya wajib diisi.',
             'biaya.numeric'  => 'Biaya harus berupa angka.',
             'foto.mimes'     => 'Format gambar harus jpg, jpeg, atau png.',
@@ -77,6 +87,8 @@ class InstrukturController extends Controller
         $user->save();
 
         $instruktur->biaya = $request->biaya;
+        $instruktur->no_hp = $request->no_hp;
+        $instruktur->alamat = $request->alamat;
 
         // jika ada foto baru
         if ($request->hasFile('foto')) {

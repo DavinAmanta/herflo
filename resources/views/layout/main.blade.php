@@ -272,7 +272,7 @@
                             <!-- Menu khusus INSTRUKTUR -->
                             @if(Auth::user()->role == 'instruktur')
                                 <ul class="space-y-2">
-                                    <li>
+                                    {{-- <li>
                                         <a href="{{ route('instruktur.dashboard') }}"
                                             class="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100
                                             {{ request()->routeIs('instruktur.dashboard') ? 'bg-gray-200 font-semibold' : 'text-gray-900' }}">
@@ -280,7 +280,7 @@
                                                 viewBox="0 0 24 24"><path d="M12 2L2 7h20L12 2zM2 17v2h20v-2H2zm0-4v2h20v-2H2z"/></svg>
                                             <span class="ml-3">Dashboard</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a href="{{ route('instruktur.jadwal') }}"
                                             class="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100
@@ -290,7 +290,7 @@
                                             <span class="ml-3">Kelola Jadwal</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="#"
                                             class="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100
                                             {{ request()->routeIs('instruktur.booking') ? 'bg-gray-200 font-semibold' : 'text-gray-900' }}">
@@ -298,7 +298,7 @@
                                                 viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 012 2v16a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 2v16h14V5H5z"/></svg>
                                             <span class="ml-3">Booking Member</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <!-- Galeri -->
                                     {{-- <li>
                                         <a href="{{ route('galeri.index') }}"

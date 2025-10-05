@@ -165,52 +165,6 @@
                 <p class="text-gray-600 text-center mb-10">Paket personal untuk kebugaran pribadimu</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Day Flo -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
-                        <div class="font-bold text-2xl text-[#7d6b60]">Day Flo</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wider">Single Visit</div>
-                        <div class="text-5xl font-extrabold text-[#D3A796]">IDR 30K</div>
-                        <p class="text-gray-600">Drop in and flo for a day without commitment</p>
-                        <ul class="space-y-3 text-sm text-gray-600 text-left">
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Akses 1 hari penuh
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Semua fasilitas gym
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Free locker
-                            </li>
-                        </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
-          bg-[#7d6b60] text-white rounded-xl shadow-md 
-          hover:bg-[#6c5c52] hover:shadow-lg 
-          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
-          transition duration-200 ease-in-out">
-                            Pilih Sekarang
-                        </a>
-
-                    </div>
-
                     <!-- Monthly Flo -->
                     <div
                         class="bg-white p-8 rounded-2xl shadow-2xl border-t-4 border-[#7d6b60] card-hover text-center space-y-6 staggered-item relative">
@@ -258,7 +212,7 @@
                                 1 sesi konsultasi gratis
                             </li>
                         </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+                        <a href="{{ route('user.daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
           bg-[#7d6b60] text-white rounded-xl shadow-md 
           hover:bg-[#6c5c52] hover:shadow-lg 
           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
@@ -322,20 +276,73 @@
                                 Diskon 20% dari harga bulanan
                             </li>
                         </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+                        <a href="{{ route('user.daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
           bg-[#7d6b60] text-white rounded-xl shadow-md 
           hover:bg-[#6c5c52] hover:shadow-lg 
           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
           transition duration-200 ease-in-out">
                             Pilih Sekarang
                         </a>
-
                     </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
+                        <div class="font-bold text-2xl text-[#7d6b60]">8 Months Flo</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-wider">Membership 8 Bulan</div>
+                        <div class="text-5xl font-extrabold text-[#D3A796]">IDR 800K</div>
+                        <p class="text-gray-600">Nikmati akses penuh selama 8 bulan dengan fasilitas lengkap HerFlo Gym.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-600 text-left">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Akses penuh 8 bulan
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Akses ke semua fasilitas gym
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Free locker & handuk
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Program latihan personal (1 sesi gratis)
+                            </li>
+                        </ul>
+                        <a href="{{ route('user.daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+      bg-[#7d6b60] text-white rounded-xl shadow-md 
+      hover:bg-[#6c5c52] hover:shadow-lg 
+      focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
+      transition duration-200 ease-in-out">
+                            Pilih Sekarang
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
             <!-- Group Plans -->
-            <div class="mb-16 fade-in-up">
+            {{-- <div class="mb-16 fade-in-up">
                 <h3 class="text-3xl font-semibold text-[#4a3f35] mb-2 text-center">Your Squad Flow Plan (Group)</h3>
                 <p class="text-gray-600 text-center mb-10">Lebih seru dan hemat bersama teman-teman!</p>
 
@@ -386,150 +393,151 @@
                                 Free locker
                             </li>
                         </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base
+            font-semibold
+            bg-[#7d6b60] text-white rounded-xl shadow-md
+            hover:bg-[#6c5c52] hover:shadow-lg
+            focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2
+            transition duration-200 ease-in-out">
+            Pilih Sekarang
+            </a>
+
+        </div>
+
+        <!-- For 3 Flo Babes -->
+        <div
+            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
+            <div class="font-bold text-2xl text-[#7d6b60]">For 3 Flo Babes</div>
+            <div class="text-sm text-gray-500 uppercase tracking-wider">8 Session</div>
+            <div class="text-5xl font-extrabold text-[#D3A796]">IDR 560K<span
+                    class="text-lg font-normal block">/Person</span></div>
+            <p class="text-gray-600">Valid For a Month</p>
+            <ul class="space-y-3 text-sm text-gray-600 text-left">
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    8 sesi dalam 1 bulan
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Untuk 3 orang
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Semua fasilitas gym
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Free locker & towel
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Lebih hemat 12.5%
+                </li>
+            </ul>
+            <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
           bg-[#7d6b60] text-white rounded-xl shadow-md 
           hover:bg-[#6c5c52] hover:shadow-lg 
           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
           transition duration-200 ease-in-out">
-                            Pilih Sekarang
-                        </a>
+                Pilih Sekarang
+            </a>
 
-                    </div>
+        </div>
 
-                    <!-- For 3 Flo Babes -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
-                        <div class="font-bold text-2xl text-[#7d6b60]">For 3 Flo Babes</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wider">8 Session</div>
-                        <div class="text-5xl font-extrabold text-[#D3A796]">IDR 560K<span
-                                class="text-lg font-normal block">/Person</span></div>
-                        <p class="text-gray-600">Valid For a Month</p>
-                        <ul class="space-y-3 text-sm text-gray-600 text-left">
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                8 sesi dalam 1 bulan
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Untuk 3 orang
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Semua fasilitas gym
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Free locker & towel
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Lebih hemat 12.5%
-                            </li>
-                        </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
+        <!-- For 4 Flo Babes -->
+        <div
+            class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
+            <div class="font-bold text-2xl text-[#7d6b60]">For 4 Flo Babes</div>
+            <div class="text-sm text-gray-500 uppercase tracking-wider">8 Session</div>
+            <div class="text-5xl font-extrabold text-[#D3A796]">IDR 480K<span
+                    class="text-lg font-normal block">/Person</span></div>
+            <p class="text-gray-600">Valid For a Month</p>
+            <ul class="space-y-3 text-sm text-gray-600 text-left">
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    8 sesi dalam 1 bulan
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Untuk 4 orang
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Semua fasilitas gym
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Free locker & towel
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Lebih hemat 25%
+                </li>
+            </ul>
+            <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
           bg-[#7d6b60] text-white rounded-xl shadow-md 
           hover:bg-[#6c5c52] hover:shadow-lg 
           focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
           transition duration-200 ease-in-out">
-                            Pilih Sekarang
-                        </a>
+                Pilih Sekarang
+            </a>
 
-                    </div>
+        </div>
+        </div> --}}
+        </div>
 
-                    <!-- For 4 Flo Babes -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#C5A08A] card-hover text-center space-y-6 staggered-item">
-                        <div class="font-bold text-2xl text-[#7d6b60]">For 4 Flo Babes</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wider">8 Session</div>
-                        <div class="text-5xl font-extrabold text-[#D3A796]">IDR 480K<span
-                                class="text-lg font-normal block">/Person</span></div>
-                        <p class="text-gray-600">Valid For a Month</p>
-                        <ul class="space-y-3 text-sm text-gray-600 text-left">
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                8 sesi dalam 1 bulan
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Untuk 4 orang
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Semua fasilitas gym
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Free locker & towel
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Lebih hemat 25%
-                            </li>
-                        </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
-          bg-[#7d6b60] text-white rounded-xl shadow-md 
-          hover:bg-[#6c5c52] hover:shadow-lg 
-          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
-          transition duration-200 ease-in-out">
-                            Pilih Sekarang
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Personal Trainer Plan -->
-            <div class="fade-in-up">
+        <!-- Personal Trainer Plan -->
+        {{-- <div class="fade-in-up">
                 <h3 class="text-3xl font-semibold text-[#4a3f35] mb-2 text-center">Your Person Flo Plan (Private
                     Trainer)</h3>
                 <p class="text-gray-600 text-center mb-10">Pengalaman eksklusif dengan perhatian penuh dari trainer</p>
@@ -588,22 +596,23 @@
                                 Akses eksklusif jam tertentu
                             </li>
                         </ul>
-                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base font-semibold 
-          bg-[#7d6b60] text-white rounded-xl shadow-md 
-          hover:bg-[#6c5c52] hover:shadow-lg 
-          focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2 
-          transition duration-200 ease-in-out">
-                            Pilih Sekarang
-                        </a>
+                        <a href="{{ route('daftar.create') }}" class="block w-full text-center py-3 px-6 mt-4 text-base
+        font-semibold
+        bg-[#7d6b60] text-white rounded-xl shadow-md
+        hover:bg-[#6c5c52] hover:shadow-lg
+        focus:outline-none focus:ring-2 focus:ring-[#7d6b60] focus:ring-offset-2
+        transition duration-200 ease-in-out">
+        Pilih Sekarang
+        </a>
 
-                    </div>
-                </div>
-            </div>
+        </div>
+        </div>
+        </div> --}}
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-[#f8f4f1]">
+    {{-- <section class="py-16 bg-[#f8f4f1]">
         <div class="container mx-auto px-6 lg:px-16 text-center fade-in-up">
             <h2 class="text-3xl font-bold text-[#7d6b60] mb-6">Masih Bingung Memilih Paket?</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
@@ -617,6 +626,6 @@
                     Trial</a>
             </div>
         </div>
-    </section>
+    </section> --}}
 </body>
 @endsection

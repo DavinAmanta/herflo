@@ -19,21 +19,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // Relasi dengan PendaftaranMember (seorang user bisa memiliki banyak permintaan pendaftaran)
     public function pendaftaranMembers()
     {
         return $this->hasMany(PendaftaranMember::class);
     }
-
-    // Relasi dengan Member (seorang user bisa menjadi member)
     public function member()
     {
         return $this->hasOne(Member::class);
     }
 
     public function instruktur()
-{
-    return $this->hasOne(Instruktur::class, 'user_id');
-    // foreign key di tabel instruktur = user_id
-}
+    {
+        return $this->hasOne(\App\Models\Instruktur::class, 'id_user');
+    }
 }

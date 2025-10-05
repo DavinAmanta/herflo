@@ -16,7 +16,9 @@ class Instruktur extends Model
     protected $fillable = [
         'id_user',
         'foto',
-        'biaya'
+        'biaya',
+        'no_hp',
+        'alamat'
     ];
 
     public function user()
@@ -24,16 +26,13 @@ class Instruktur extends Model
         return $this->belongsTo(User::class, 'id_user');
     }
 
-
-    // Relasi ke JadwalKelas (seorang instruktur bisa memiliki banyak jadwal kelas)
-     public function jadwals()
+    public function jadwals()
     {
-        // Ambil semua jadwal yang diampu instruktur login
-        $jadwals = JadwalKelas::where('instruktur_id', auth()->id())
-                    ->orderBy('hari')
-                    ->orderBy('waktu')
-                    ->get();
+        return $this->hasMany(JadwalKelas::class, 'instruktur_id');
+    }
 
-        return view('instruktur.jadwal', compact('jadwals'));
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class, 'jadwal_kelas_id');
     }
 }

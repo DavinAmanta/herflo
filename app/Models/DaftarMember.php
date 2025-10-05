@@ -9,8 +9,10 @@ class DaftarMember extends Model
     protected $fillable = [
         'id_user',
         'no_hp',
+        'nik',
         'alamat',
         'tgl_daftar',
+        'tgl_berakhir',
     ];
 
     public function user()

@@ -73,6 +73,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'role:user'])->prefix('user')->name('user.')->group(function () {
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
     Route::post('/daftar-member', [UserController::class, 'daftarMember'])->name('daftarMember');
+    Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
+    Route::post('/daftar/store', [DaftarController::class, 'store'])->name('daftar.store');
+    Route::get('/daftar/{id}/edit', [DaftarController::class, 'edit'])->name('daftar.edit');
 });
 
 /*
