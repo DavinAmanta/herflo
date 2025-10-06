@@ -161,7 +161,7 @@
                 <a href="{{ route('daftar.index') }}"
                     class="hover:text-[#7d6b60] transition-colors animate-on-load">Membership</a>
                 <a href="{{ route('trainer.index')}}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Personal Trainer</a>
-                <a href="{{ route('member.booking_saya')}}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Data Booking</a>
+                <a href="{{ route('member.booking_saya')}}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Booking Saya</a>
             </div>
             <div class="hidden lg:flex items-center space-x-4">
                 @guest

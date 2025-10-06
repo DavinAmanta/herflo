@@ -262,6 +262,7 @@
             grid-template-columns: 1fr;
         }
     }
+
 </style>
 </head>
 
@@ -294,94 +295,100 @@
             <!-- Booking List -->
             <div id="booking-container">
                 @if($bookings->count() > 0)
-                    @foreach($bookings as $booking)
-                    <div class="booking-card fade-in-up {{ $booking->status }}" data-status="{{ $booking->status }}">
-                        <div class="booking-header">
-                            <div class="flex-1">
-                                <div class="booking-date">
-                                    Dibooking pada {{ \Carbon\Carbon::parse($booking->created_at)->format('d F Y H:i') }}
-                                </div>
-                                <h3 class="booking-title">
-                                    {{ $booking->jadwalKelas->nama_kelas }} - {{ $booking->jadwalKelas->instruktur->user->name }}
-                                </h3>
+                @foreach($bookings as $booking)
+                <div class="booking-card fade-in-up {{ $booking->status }}" data-status="{{ $booking->status }}">
+                    <div class="booking-header">
+                        <div class="flex-1">
+                            <div class="booking-date">
+                                Dibooking pada {{ \Carbon\Carbon::parse($booking->created_at)->format('d F Y H:i') }}
                             </div>
-                            <div class="flex items-center gap-3">
-                                <span class="status-badge status-{{ $booking->status }}">
-                                    {{ $booking->status }}
-                                </span>
-                                <span class="payment-badge payment-{{ $booking->status_bayar === 'lunas' ? 'paid' : 'pending' }}">
-                                    {{ $booking->status_bayar === 'lunas' ? 'Lunas' : 'Belum Lunas' }}
-                                </span>
-                            </div>
+                            <h3 class="booking-title">
+                                {{ $booking->jadwalKelas->nama_kelas }} -
+                                {{ $booking->jadwalKelas->instruktur->user->name }}
+                            </h3>
                         </div>
-
-                        <div class="booking-meta">
-                            <div class="meta-item">
-                                <span class="meta-label">Hari & Jam</span>
-                                <span class="meta-value">
-                                    {{ $booking->jadwalKelas->hari }}, {{ \Carbon\Carbon::parse($booking->jadwalKelas->waktu)->format('H:i') }}
-                                </span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Tanggal Kelas</span>
-                                <span class="meta-value">
-                                    {{ \Carbon\Carbon::parse($booking->tanggal)->format('d F Y') }}
-                                </span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Instruktur</span>
-                                <span class="meta-value">
-                                    {{ $booking->jadwalKelas->instruktur->user->name }}
-                                </span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Biaya</span>
-                                <span class="price-tag">
-                                    Rp {{ number_format($booking->jadwalKelas->instruktur->biaya, 0, ',', '.') }}
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="booking-actions">
-                            @if($booking->status === 'pending' && $booking->status_bayar === 'belum_lunas')
-                                <a href="{{ route('member.pembayaran', $booking->id) }}" class="btn-custom">
-                                    Bayar Sekarang
-                                </a>
-                                <button class="btn-outline" onclick="cancelBooking({{ $booking->id }})">
-                                    Batalkan
-                                </button>
-                            {{-- @elseif($booking->status === 'approved' && $booking->status_bayar === 'lunas')
-                                <button class="btn-secondary" onclick="showClassDetails({{ $booking->id }})">
-                                    Detail Kelas
-                                </button>
-                                <button class="btn-outline" onclick="downloadInvoice({{ $booking->id }})">
-                                    Download Invoice
-                                </button> --}}
-                            @elseif($booking->status === 'rejected')
-                                <button class="btn-outline" onclick="rebookClass({{ $booking->id }})">
-                                    Booking Ulang
-                                </button>
-                            @endif
-                            
-                            @if($booking->status === 'pending' && $booking->status_bayar === 'lunas')
-                                <span class="text-sm text-gray-500">Menunggu konfirmasi admin</span>
-                            @endif
+                        <div class="flex items-center gap-3">
+                            <span class="status-badge status-{{ $booking->status }}">
+                                {{ $booking->status }}
+                            </span>
+                            <span
+                                class="payment-badge payment-{{ $booking->status_bayar === 'lunas' ? 'paid' : 'pending' }}">
+                                {{ $booking->status_bayar === 'lunas' ? 'Lunas' : 'Belum Lunas' }}
+                            </span>
                         </div>
                     </div>
-                    @endforeach
-                @else
-                    <div class="empty-state fade-in-up">
-                        <div class="empty-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                            </svg>
+
+                    <div class="booking-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Hari & Jam</span>
+                            <span class="meta-value">
+                                {{ $booking->jadwalKelas->hari }},
+                                {{ \Carbon\Carbon::parse($booking->jadwalKelas->waktu)->format('H:i') }}
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold text-[#7d6b60] mb-2">Belum Ada Booking</h3>
-                        <p class="text-gray-600 mb-6">Anda belum memiliki booking kelas. Yuk, booking kelas pertama Anda!</p>
-                        <a href="{{ route('trainer.index') }}" class="btn-custom">
-                            Cari Kelas
+                        <div class="meta-item">
+                            <span class="meta-label">Tanggal Kelas</span>
+                            <span class="meta-value">
+                                {{ \Carbon\Carbon::parse($booking->tanggal)->format('d F Y') }}
+                            </span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Instruktur</span>
+                            <span class="meta-value">
+                                {{ $booking->jadwalKelas->instruktur->user->name }}
+                            </span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Biaya</span>
+                            <span class="price-tag">
+                                Rp {{ number_format($booking->jadwalKelas->instruktur->biaya, 0, ',', '.') }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="booking-actions">
+                        @if($booking->status === 'pending' && $booking->status_bayar === 'belum_lunas')
+                        <a href="{{ route('member.pembayaran', $booking->id) }}" class="btn-custom">
+                            Bayar Sekarang
                         </a>
+                        <button class="btn-outline" onclick="cancelBooking({{ $booking->id }})">
+                            Batalkan
+                        </button>
+                        {{-- @elseif($booking->status === 'approved' && $booking->status_bayar === 'lunas')
+                                <button class="btn-secondary" onclick="showClassDetails({{ $booking->id }})">
+                        Detail Kelas
+                        </button>
+                        <button class="btn-outline" onclick="downloadInvoice({{ $booking->id }})">
+                            Download Invoice
+                        </button> --}}
+                        @elseif($booking->status === 'rejected')
+                        <a href="{{ route('trainer.index') }}"><button class="btn-outline">
+                                Booking Ulang
+                            </button></a>
+                        @endif
+
+                        @if($booking->status === 'pending' && $booking->status_bayar === 'lunas')
+                        <span class="text-sm text-gray-500">Menunggu konfirmasi admin</span>
+                        @endif
                     </div>
+                </div>
+                @endforeach
+                @else
+                <div class="empty-state fade-in-up">
+                    <div class="empty-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#7d6b60] mb-2">Belum Ada Booking</h3>
+                    <p class="text-gray-600 mb-6">Anda belum memiliki booking kelas. Yuk, booking kelas pertama Anda!
+                    </p>
+                    <a href="{{ route('trainer.index') }}" class="btn-custom">
+                        Cari Kelas
+                    </a>
+                </div>
                 @endif
             </div>
 
@@ -390,23 +397,26 @@
             <div class="mt-8 flex justify-center fade-in">
                 <div class="flex space-x-2">
                     @if($bookings->onFirstPage())
-                        <span class="px-3 py-2 bg-gray-200 text-gray-500 rounded-lg cursor-not-allowed">Sebelumnya</span>
+                    <span class="px-3 py-2 bg-gray-200 text-gray-500 rounded-lg cursor-not-allowed">Sebelumnya</span>
                     @else
-                        <a href="{{ $bookings->previousPageUrl() }}" class="px-3 py-2 bg-[#D3A796] text-white rounded-lg hover:bg-[#b88c7a] transition">Sebelumnya</a>
+                    <a href="{{ $bookings->previousPageUrl() }}"
+                        class="px-3 py-2 bg-[#D3A796] text-white rounded-lg hover:bg-[#b88c7a] transition">Sebelumnya</a>
                     @endif
 
                     @foreach(range(1, $bookings->lastPage()) as $page)
-                        @if($page == $bookings->currentPage())
-                            <span class="px-3 py-2 bg-[#7d6b60] text-white rounded-lg">{{ $page }}</span>
-                        @else
-                            <a href="{{ $bookings->url($page) }}" class="px-3 py-2 bg-white text-[#7d6b60] rounded-lg hover:bg-[#f8f4f1] transition">{{ $page }}</a>
-                        @endif
+                    @if($page == $bookings->currentPage())
+                    <span class="px-3 py-2 bg-[#7d6b60] text-white rounded-lg">{{ $page }}</span>
+                    @else
+                    <a href="{{ $bookings->url($page) }}"
+                        class="px-3 py-2 bg-white text-[#7d6b60] rounded-lg hover:bg-[#f8f4f1] transition">{{ $page }}</a>
+                    @endif
                     @endforeach
 
                     @if($bookings->hasMorePages())
-                        <a href="{{ $bookings->nextPageUrl() }}" class="px-3 py-2 bg-[#D3A796] text-white rounded-lg hover:bg-[#b88c7a] transition">Selanjutnya</a>
+                    <a href="{{ $bookings->nextPageUrl() }}"
+                        class="px-3 py-2 bg-[#D3A796] text-white rounded-lg hover:bg-[#b88c7a] transition">Selanjutnya</a>
                     @else
-                        <span class="px-3 py-2 bg-gray-200 text-gray-500 rounded-lg cursor-not-allowed">Selanjutnya</span>
+                    <span class="px-3 py-2 bg-gray-200 text-gray-500 rounded-lg cursor-not-allowed">Selanjutnya</span>
                     @endif
                 </div>
             </div>
@@ -418,12 +428,15 @@
     <div id="cancel-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-2xl p-6 max-w-md mx-4">
             <h3 class="text-xl font-bold text-gray-800 mb-4">Batalkan Booking</h3>
-            <p class="text-gray-600 mb-6">Apakah Anda yakin ingin membatalkan booking ini? Tindakan ini tidak dapat dibatalkan.</p>
+            <p class="text-gray-600 mb-6">Apakah Anda yakin ingin membatalkan booking ini? Tindakan ini tidak dapat
+                dibatalkan.</p>
             <div class="flex space-x-3">
-                <button id="confirm-cancel" class="flex-1 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
+                <button id="confirm-cancel"
+                    class="flex-1 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
                     Ya, Batalkan
                 </button>
-                <button id="close-cancel-modal" class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition">
+                <button id="close-cancel-modal"
+                    class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition">
                     Batal
                 </button>
             </div>
@@ -432,24 +445,25 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Filter functionality
         const filterTabs = document.querySelectorAll('.filter-tab');
         const bookingCards = document.querySelectorAll('.booking-card');
-        
+
         filterTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
+            tab.addEventListener('click', function () {
                 // Remove active class from all tabs
                 filterTabs.forEach(t => t.classList.remove('active'));
-                
+
                 // Add active class to clicked tab
                 this.classList.add('active');
-                
+
                 const filter = this.getAttribute('data-filter');
-                
+
                 // Show/hide booking cards based on filter
                 bookingCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-status') === filter) {
+                    if (filter === 'all' || card.getAttribute('data-status') ===
+                        filter) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
@@ -463,54 +477,54 @@
         const closeCancelModal = document.getElementById('close-cancel-modal');
         let currentBookingId = null;
 
-        window.cancelBooking = function(bookingId) {
+        window.cancelBooking = function (bookingId) {
             currentBookingId = bookingId;
             cancelModal.classList.remove('hidden');
         };
 
-        closeCancelModal.addEventListener('click', function() {
+        closeCancelModal.addEventListener('click', function () {
             cancelModal.classList.add('hidden');
             currentBookingId = null;
         });
 
-        document.getElementById('confirm-cancel').addEventListener('click', function() {
+        document.getElementById('confirm-cancel').addEventListener('click', function () {
             if (currentBookingId) {
                 // Send cancel request
                 fetch(`/member/booking/${currentBookingId}/cancel`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert('Gagal membatalkan booking');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Terjadi kesalahan saat membatalkan booking');
-                });
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            alert('Gagal membatalkan booking');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Terjadi kesalahan saat membatalkan booking');
+                    });
             }
         });
 
         // Other action functions
-        window.showClassDetails = function(bookingId) {
+        window.showClassDetails = function (bookingId) {
             alert(`Menampilkan detail kelas untuk booking ID: ${bookingId}`);
             // Implement class details modal or page
         };
 
-        window.downloadInvoice = function(bookingId) {
+        window.downloadInvoice = function (bookingId) {
             alert(`Mengunduh invoice untuk booking ID: ${bookingId}`);
             // Implement invoice download
             // window.open(`/member/booking/${bookingId}/invoice`, '_blank');
         };
 
-        window.rebookClass = function(bookingId) {
+        window.rebookClass = function (bookingId) {
             alert(`Redirect ke halaman booking ulang untuk ID: ${bookingId}`);
             // Implement rebooking logic
             // window.location.href = `/member/booking/${bookingId}/rebook`;
@@ -521,7 +535,7 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -529,12 +543,13 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe all animated elements
         document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => {
             observer.observe(el);
         });
     });
+
 </script>
 
 @endsection
