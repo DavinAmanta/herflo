@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bugar dan Percaya Diri di Herflo: Gym Eksklusif untuk Wanita | HerFlo</title>
+    <title>Bugar dan Percaya Diri di ToGlow: Gym Eksklusif untuk Wanita | ToGlow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -210,7 +210,7 @@
     <!-- Header -->
     <header class="bg-[#f8f4f1] fixed w-full shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center px-4 py-4 lg:py-6">
-            <div class="font-bold text-2xl text-[#7d6b60]"><a href="index.html">HerFlo</a></div>
+            <div class="font-bold text-2xl text-[#7d6b60]"><a href="index.html">ToGlow</a></div>
             <div class="hidden lg:flex space-x-8 text-base font-medium">
                 <a href="index.html#about" class="hover:text-[#7d6b60] transition-colors">About Us</a>
                 <a href="index.html#membership" class="hover:text-[#7d6b60] transition-colors">Membership</a>
@@ -251,11 +251,11 @@
                 </div>
                 
                 <h1 class="text-4xl lg:text-5xl font-extrabold text-[#4a3f35] leading-tight mb-6 fade-in-up">
-                    Bugar dan Percaya Diri di Herflo: Gym Eksklusif untuk Wanita
+                    Bugar dan Percaya Diri di ToGlow: Gym Eksklusif untuk Wanita
                 </h1>
                 
                 <p class="text-xl text-gray-700 mb-8 fade-in-up">
-                    Temukan bagaimana Herflo menciptakan lingkungan yang mendukung perempuan untuk mencapai tujuan kebugaran mereka dengan nyaman dan percaya diri.
+                    Temukan bagaimana ToGlow menciptakan lingkungan yang mendukung perempuan untuk mencapai tujuan kebugaran mereka dengan nyaman dan percaya diri.
                 </p>
                 
                 <div class="flex items-center fade-in-up">
@@ -263,8 +263,8 @@
                         A
                     </div>
                     <div>
-                        <p class="font-semibold text-gray-800">Admin HerFlo</p>
-                        <p class="text-sm text-gray-600">Penulis HerFlo</p>
+                        <p class="font-semibold text-gray-800">Admin ToGlow</p>
+                        <p class="text-sm text-gray-600">Penulis ToGlow</p>
                     </div>
                 </div>
             </div>
@@ -277,26 +277,26 @@
             <div class="max-w-4xl mx-auto">
                 <div class="article-image fade-in">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Wanita berolahraga di HerFlo" class="w-full h-auto">
+                         alt="Wanita berolahraga di ToGlow" class="w-full h-auto">
                 </div>
                 
                 <div class="article-content fade-in-up">
-                    <p>Dalam era modern ini, kesadaran akan pentingnya kesehatan dan kebugaran tubuh semakin meningkat di kalangan perempuan. Namun, tidak semua perempuan merasa nyaman berolahraga di gym umum yang didominasi oleh laki-laki. Herflo hadir sebagai solusi dengan menawarkan lingkungan eksklusif yang dirancang khusus untuk kebutuhan perempuan.</p>
+                    <p>Dalam era modern ini, kesadaran akan pentingnya kesehatan dan kebugaran tubuh semakin meningkat di kalangan perempuan. Namun, tidak semua perempuan merasa nyaman berolahraga di gym umum yang didominasi oleh laki-laki. ToGlow hadir sebagai solusi dengan menawarkan lingkungan eksklusif yang dirancang khusus untuk kebutuhan perempuan.</p>
                     
                     <h2>Lingkungan yang Mendukung Perempuan</h2>
                     
-                    <p>Herflo memahami bahwa perempuan memiliki kebutuhan khusus dalam berolahraga. Mulai dari privasi, kenyamanan, hingga dukungan psikologis. Di Herflo, setiap anggota dapat berolahraga dengan tenang tanpa merasa diawasi atau dinilai.</p>
+                    <p>ToGlow memahami bahwa perempuan memiliki kebutuhan khusus dalam berolahraga. Mulai dari privasi, kenyamanan, hingga dukungan psikologis. Di ToGlow, setiap anggota dapat berolahraga dengan tenang tanpa merasa diawasi atau dinilai.</p>
                     
                     <div class="article-image fade-in">
                         <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Fasilitas HerFlo" class="w-full h-auto">
+                             alt="Fasilitas ToGlow" class="w-full h-auto">
                     </div>
                     
-                    <p>"Kami menciptakan Herflo sebagai ruang aman bagi perempuan untuk mengeksplorasi potensi fisik mereka tanpa tekanan," kata Sarah, salah satu pelatih di Herflo. "Di sini, fokusnya adalah pada perjalanan pribadi setiap anggota, bukan pada kompetisi."</p>
+                    <p>"Kami menciptakan ToGlow sebagai ruang aman bagi perempuan untuk mengeksplorasi potensi fisik mereka tanpa tekanan," kata Sarah, salah satu pelatih di ToGlow. "Di sini, fokusnya adalah pada perjalanan pribadi setiap anggota, bukan pada kompetisi."</p>
                     
                     <h2>Fasilitas Lengkap dengan Sentuhan Feminin</h2>
                     
-                    <p>Herflo tidak hanya menyediakan peralatan gym standar, tetapi juga berbagai fasilitas yang dirancang dengan memperhatikan kebutuhan perempuan:</p>
+                    <p>ToGlow tidak hanya menyediakan peralatan gym standar, tetapi juga berbagai fasilitas yang dirancang dengan memperhatikan kebutuhan perempuan:</p>
                     
                     <ul>
                         <li><strong>Area Kardio dan Strength Training</strong> - Dilengkapi dengan peralatan modern yang sesuai dengan anatomi tubuh perempuan</li>
@@ -307,13 +307,13 @@
                     </ul>
                     
                     <blockquote>
-                        "Bergabung dengan Herflo adalah keputusan terbaik untuk kesehatan saya. Saya tidak hanya menjadi lebih bugar, tetapi juga lebih percaya diri."
-                        <footer>- Maria, anggota Herflo sejak 2024</footer>
+                        "Bergabung dengan ToGlow adalah keputusan terbaik untuk kesehatan saya. Saya tidak hanya menjadi lebih bugar, tetapi juga lebih percaya diri."
+                        <footer>- Maria, anggota ToGlow sejak 2024</footer>
                     </blockquote>
                     
                     <h2>Program yang Disesuaikan dengan Kebutuhan Perempuan</h2>
                     
-                    <p>Herflo menawarkan berbagai program yang dikembangkan khusus untuk perempuan, dengan mempertimbangkan siklus hormonal, metabolisme, dan tujuan kebugaran yang unik:</p>
+                    <p>ToGlow menawarkan berbagai program yang dikembangkan khusus untuk perempuan, dengan mempertimbangkan siklus hormonal, metabolisme, dan tujuan kebugaran yang unik:</p>
                     
                     <h3>1. Program Strength Building</h3>
                     <p>Dirancang untuk membantu perempuan membangun kekuatan otot tanpa khawatir terlihat terlalu berotot. Program ini fokus pada bentuk tubuh yang proporsional dan sehat.</p>
@@ -326,20 +326,20 @@
                     
                     <div class="article-image fade-in">
                         <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1520&q=80" 
-                             alt="Kelas grup di HerFlo" class="w-full h-auto">
+                             alt="Kelas grup di ToGlow" class="w-full h-auto">
                     </div>
                     
                     <h2>Komunitas yang Mendukung</h2>
                     
-                    <p>Salah satu keunggulan Herflo adalah komunitasnya. Anggota tidak hanya datang untuk berolahraga, tetapi juga untuk berbagi pengalaman dan saling mendukung. Berbagai event seperti workshop kesehatan, sesi sharing, dan kelas khusus membantu menciptakan ikatan yang kuat antar anggota.</p>
+                    <p>Salah satu keunggulan ToGlow adalah komunitasnya. Anggota tidak hanya datang untuk berolahraga, tetapi juga untuk berbagi pengalaman dan saling mendukung. Berbagai event seperti workshop kesehatan, sesi sharing, dan kelas khusus membantu menciptakan ikatan yang kuat antar anggota.</p>
                     
-                    <p>"Komunitas di Herflo seperti keluarga kedua saya," ungkap Rina, anggota setia Herflo. "Kami saling memotivasi dan merayakan setiap pencapaian, sekecil apapun itu."</p>
+                    <p>"Komunitas di ToGlow seperti keluarga kedua saya," ungkap Rina, anggota setia ToGlow. "Kami saling memotivasi dan merayakan setiap pencapaian, sekecil apapun itu."</p>
                     
-                    <h2>Mulai Perjalanan Kebugaran Anda di Herflo</h2>
+                    <h2>Mulai Perjalanan Kebugaran Anda di ToGlow</h2>
                     
-                    <p>Bergabung dengan Herflo adalah langkah pertama menuju versi terbaik diri Anda. Dengan lingkungan yang mendukung, fasilitas lengkap, dan program yang terpersonalisasi, Herflo siap membantu Anda mencapai tujuan kebugaran dengan cara yang menyenangkan dan berkelanjutan.</p>
+                    <p>Bergabung dengan ToGlow adalah langkah pertama menuju versi terbaik diri Anda. Dengan lingkungan yang mendukung, fasilitas lengkap, dan program yang terpersonalisasi, ToGlow siap membantu Anda mencapai tujuan kebugaran dengan cara yang menyenangkan dan berkelanjutan.</p>
                     
-                    <p>Jangan ragu untuk mencoba free trial class dan merasakan sendiri pengalaman berolahraga di Herflo. Jadwalkan kunjungan Anda hari ini dan mulailah perjalanan menuju hidup yang lebih sehat dan percaya diri!</p>
+                    <p>Jangan ragu untuk mencoba free trial class dan merasakan sendiri pengalaman berolahraga di ToGlow. Jadwalkan kunjungan Anda hari ini dan mulailah perjalanan menuju hidup yang lebih sehat dan percaya diri!</p>
                 </div>
                 
                 <!-- Tags and Share -->
@@ -377,7 +377,7 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-xl text-[#7d6b60] mb-2">Tentang Penulis</h3>
-                            <p class="text-gray-700">Admin HerFlo adalah tim yang berdedikasi untuk menyediakan informasi terkini tentang kesehatan, kebugaran, dan gaya hidup sehat untuk perempuan. Dengan pengalaman lebih dari 5 tahun di industri kebugaran, tim kami berkomitmen untuk membantu perempuan Indonesia mencapai versi terbaik diri mereka melalui artikel yang informatif dan inspiratif.</p>
+                            <p class="text-gray-700">Admin ToGlow adalah tim yang berdedikasi untuk menyediakan informasi terkini tentang kesehatan, kebugaran, dan gaya hidup sehat untuk perempuan. Dengan pengalaman lebih dari 5 tahun di industri kebugaran, tim kami berkomitmen untuk membantu perempuan Indonesia mencapai versi terbaik diri mereka melalui artikel yang informatif dan inspiratif.</p>
                         </div>
                     </div>
                 </div>
@@ -468,7 +468,7 @@
     <footer class="bg-[#C5A08A] pt-16 pb-10 text-white">
         <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div class="fade-in-up">
-                <h4 class="font-bold text-3xl mb-5">HerFlo</h4>
+                <h4 class="font-bold text-3xl mb-5">ToGlow</h4>
                 <p class="text-base opacity-90 mb-4">Gym eksklusif untuk perempuan dengan fasilitas lengkap dan lingkungan yang mendukung.</p>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.0599909379305!2d110.95986325624764!3d-7.5971659244119305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a19004b4ef1f5%3A0x68889f4e4d43230!2sHer%20Flo!5e0!3m2!1sid!2sid!4v1755746348658!5m2!1sid!2sid"
@@ -486,7 +486,7 @@
             </div>
             <div class="fade-in-up">
                 <h4 class="font-semibold text-2xl mb-5">Contact Us</h4>
-                <p class="text-base opacity-90 mb-2">📧 info@herflo.com</p>
+                <p class="text-base opacity-90 mb-2">📧 info@ToGlow.com</p>
                 <p class="text-base opacity-90 mb-2">📞 +62 811 2345 6789</p>
                 <p class="text-base opacity-90">📍 Jl. Contoh Alamat No. 123, Yogyakarta</p>
             </div>
@@ -520,7 +520,7 @@
             </div>
         </div>
         <div class="mt-12 border-t border-white/30 pt-6 text-center text-base opacity-90 fade-in">
-            © 2025 HerFlo Gym. All rights reserved.
+            © 2025 ToGlow. All rights reserved.
         </div>
     </footer>
 

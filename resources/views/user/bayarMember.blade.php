@@ -64,7 +64,7 @@
                 <div class="text-sm space-y-2">
                     <div class="flex justify-between"><span>Bank</span><span class="font-semibold">BCA</span></div>
                     <div class="flex justify-between"><span>No. Rekening</span><span class="font-semibold">1234567890</span></div>
-                    <div class="flex justify-between"><span>Atas Nama</span><span class="font-semibold">HERFLO FITNESS</span></div>
+                    <div class="flex justify-between"><span>Atas Nama</span><span class="font-semibold">ToGlow FITNESS</span></div>
                     <p class="mt-3 text-yellow-800 bg-yellow-50 p-2 rounded text-xs">
                         Mohon transfer sesuai total nominal agar aktivasi membership berhasil.
                     </p>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HerFlo | Push Your Limits</title>
+    <title>ToGlow | Push Your Limits</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -155,7 +155,7 @@
 <body class="bg-[#f8f4f1] text-gray-800">
     <header class="bg-[#f8f4f1] fixed w-full shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center px-4 py-4 lg:py-6">
-            <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">HerFlo</div>
+            <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">ToGlow</div>
             <div class="hidden lg:flex space-x-8 text-base font-medium">
                 <a href="{{ route('home') }}" class="hover:text-[#7d6b60] transition-colors animate-on-load">Home</a>
                 <a href="{{ route('daftar.index') }}"
@@ -265,7 +265,7 @@
     <footer class="bg-[#C5A08A] pt-16 pb-10 mt-16 text-white">
         <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div class="fade-in-up">
-                <h4 class="font-bold text-3xl mb-5">HerFlo</h4>
+                <h4 class="font-bold text-3xl mb-5">ToGlow</h4>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.0599909379305!2d110.95986325624764!3d-7.5971659244119305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a19004b4ef1f5%3A0x68889f4e4d43230!2sHer%20Flo!5e0!3m2!1sid!2sid!4v1755746348658!5m2!1sid!2sid"
                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
@@ -282,7 +282,7 @@
             </div>
             <div class="fade-in-up">
                 <h4 class="font-semibold text-2xl mb-5">Contact Us</h4>
-                <p class="text-base opacity-90">📧 info@herflo.com</p>
+                <p class="text-base opacity-90">📧 info@ToGlow.com</p>
                 <p class="text-base opacity-90">📞 +62 811 2345 6789</p>
             </div>
             <div class="fade-in-up">
@@ -320,7 +320,7 @@
             </div>
         </div>
         <div class="mt-12 border-t border-white/30 pt-6 text-center text-base opacity-90 fade-in">
-            © 2025 HerFlo Gym. All rights reserved.
+            © 2025 ToGlow. All rights reserved.
         </div>
     </footer>
 

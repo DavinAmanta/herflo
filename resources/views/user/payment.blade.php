@@ -357,7 +357,7 @@
                                 </div>
                                 <div class="flex justify-between">
                                     <span>Atas Nama</span>
-                                    <span class="font-semibold">HERFLO FITNESS</span>
+                                    <span class="font-semibold">ToGlow FITNESS</span>
                                 </div>
                                 <div class="mt-3 p-3 bg-yellow-50 rounded border border-yellow-200">
                                     <p class="text-yellow-800 text-xs">Harap transfer tepat sesuai nominal total

@@ -8,7 +8,7 @@
         content="Get started with a free and open source Tailwind CSS admin dashboard featuring a sidebar layout, advanced charts, and hundreds of components based on Flowbite">
     <meta name="author" content="Themesberg">
     <meta name="generator" content="Hugo 0.143.0">
-    <title>Aplikasi GYM HerFlo - Home</title>
+    <title>Aplikasi GYM ToGlow - Home</title>
     <link rel="canonical" href="https://themesberg.com/product/tailwind-css/dashboard-windster">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +100,7 @@
                         class="text-xl font-bold flex items-center lg:ml-2.5">
                         <img src="https://themewagon.github.io/windster/images/logo.svg" class="h-6 mr-2"
                             alt="Windster Logo">
-                        <span class="self-center whitespace-nowrap">HerFlo</span>
+                        <span class="self-center whitespace-nowrap">ToGlow</span>
                     </a>
                     <form action="#" method="GET" class="hidden lg:block lg:pl-32">
                         <label for="topbar-search" class="sr-only">Search</label>

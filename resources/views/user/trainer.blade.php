@@ -154,7 +154,7 @@
                         Temukan <span class="text-[#D3A796]">Trainer Profesional</span> untuk Perjalanan Kebugaranmu
                     </h1>
                     <p class="text-[#3a2d28] text-lg leading-relaxed">
-                        Di HerFlo, kami memiliki tim trainer berkualitas dengan sertifikasi internasional dan pengalaman
+                        Di ToGlow, kami memiliki tim trainer berkualitas dengan sertifikasi internasional dan pengalaman
                         bertahun-tahun dalam membimbing wanita mencapai tujuan kebugaran mereka. Setiap trainer kami
                         memahami kebutuhan unik tubuh perempuan dan siap memberikan pendekatan personal untuk hasil
                         maksimal.
@@ -168,7 +168,7 @@
                 </div>
                 <div class="flex justify-center hero-image">
                     <img src="{{ asset('assets/gym_foto/2374c51394a8ddfe6ddf6627e4b88362-removebg-preview (1).png') }}"
-                        alt="HerFlo Trainer" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
+                        alt="ToGlow Trainer" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
     <section class="py-16 bg-[#f8f4f1]">
         <div class="container mx-auto px-6 lg:px-16">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl font-bold text-[#7d6b60] mb-4">Mengapa Memilih Trainer HerFlo?</h2>
+                <h2 class="text-4xl font-bold text-[#7d6b60] mb-4">Mengapa Memilih Trainer ToGlow?</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     Trainer kami tidak hanya ahli dalam bidang kebugaran, tetapi juga memahami psikologi dan kebutuhan
                     khusus wanita Indonesia

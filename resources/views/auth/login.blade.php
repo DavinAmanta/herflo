@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aplikasi GYM Herflo - Login</title>
+    <title>Aplikasi GYM ToGlow - Login</title>
 
     <link rel="stylesheet" href="https://themewagon.github.io/windster/app.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -17,7 +17,7 @@
             <a href="{{ url('/') }}"
                 class="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10">
                 <img src="https://themewagon.github.io/windster/images/logo.svg" class="h-10 mr-4" alt="Logo">
-                <span class="self-center text-2xl font-bold whitespace-nowrap">Herflo | Gym</span>
+                <span class="self-center text-2xl font-bold whitespace-nowrap">ToGlow | Gym</span>
             </a>
             <!-- Card -->
             <div class="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">

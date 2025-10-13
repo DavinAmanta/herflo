@@ -142,7 +142,7 @@
                 </div>
                 <div class="flex justify-center hero-image">
                     <img src="{{ asset('assets/gym_foto/2374c51394a8ddfe6ddf6627e4b88362-removebg-preview (1).png') }}"
-                        alt="HerFlo Membership" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
+                        alt="ToGlow Membership" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
             <div class="text-center mb-16 fade-in-up">
                 <h2 class="text-4xl font-bold text-[#7d6b60] mb-4">Pilih Paket Keanggotaanmu</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Semua paket memberikan akses penuh ke fasilitas HerFlo. Pilih yang paling sesuai dengan kebutuhan
+                    Semua paket memberikan akses penuh ke fasilitas ToGlow. Pilih yang paling sesuai dengan kebutuhan
                     dan budgetmu.
                 </p>
             </div>
@@ -289,7 +289,7 @@
                         <div class="font-bold text-2xl text-[#7d6b60]">8 Months Flo</div>
                         <div class="text-sm text-gray-500 uppercase tracking-wider">Membership 8 Bulan</div>
                         <div class="text-5xl font-extrabold text-[#D3A796]">IDR 800K</div>
-                        <p class="text-gray-600">Nikmati akses penuh selama 8 bulan dengan fasilitas lengkap HerFlo Gym.
+                        <p class="text-gray-600">Nikmati akses penuh selama 8 bulan dengan fasilitas lengkap ToGlow.
                         </p>
                         <ul class="space-y-3 text-sm text-gray-600 text-left">
                             <li class="flex items-center">
@@ -616,7 +616,7 @@
         <div class="container mx-auto px-6 lg:px-16 text-center fade-in-up">
             <h2 class="text-3xl font-bold text-[#7d6b60] mb-6">Masih Bingung Memilih Paket?</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                Konsultasikan kebutuhan kebugaranmu dengan tim HerFlo. Kami akan membantu memilih paket yang paling
+                Konsultasikan kebutuhan kebugaranmu dengan tim ToGlow. Kami akan membantu memilih paket yang paling
                 tepat untuk tujuanmu.
             </p>
             <div class="flex flex-wrap justify-center gap-4">

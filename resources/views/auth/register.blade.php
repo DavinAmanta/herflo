@@ -16,7 +16,7 @@
         <div class="mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8">
             <a href="{{ url('/') }}" class="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10">
                 <img src="https://themewagon.github.io/windster/images/logo.svg" class="h-10 mr-4" alt="Logo">
-                <span class="self-center text-2xl font-bold whitespace-nowrap">Gym HerFlo</span>
+                <span class="self-center text-2xl font-bold whitespace-nowrap">Gym ToGlow</span>
             </a>
 
             <div class="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">

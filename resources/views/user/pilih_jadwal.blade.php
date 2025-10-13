@@ -226,7 +226,7 @@
                     Pilih <span class="text-[#D3A796]">Jadwal Kelas</span> yang Tepat untuk Anda
                 </h1>
                 <p class="text-[#3a2d28] text-lg leading-relaxed">
-                    Temukan kelas kebugaran yang sesuai dengan waktu dan kebutuhan Anda. Semua kelas dipandu oleh trainer profesional HerFlo.
+                    Temukan kelas kebugaran yang sesuai dengan waktu dan kebutuhan Anda. Semua kelas dipandu oleh trainer profesional ToGlow.
                 </p>
             </div>
         </div>

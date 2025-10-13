@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HerFlo | Push Your Limits</title>
+    <title>ToGlow | Push Your Limits</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -154,7 +154,7 @@
 <body class="bg-[#f8f4f1] text-gray-800">
 <header class="bg-[#f8f4f1] fixed w-full shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center px-4 py-4 lg:py-6">
-            <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">HerFlo</div>
+            <div class="font-bold text-2xl text-[#7d6b60] animate-on-load">ToGlow</div>
             <div class="hidden lg:flex space-x-8 text-base font-medium">
                 <a href="#" class="hover:text-[#7d6b60] transition-colors animate-on-load">About Us</a>
                 <a href="#" class="hover:text-[#7d6b60] transition-colors animate-on-load">Membership</a>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="flex justify-center hero-image">
                     <img src="{{ asset('assets/gym_foto/10fe3850984220be97243e714da1f13e-removebg-preview.png') }}"
-                        alt="HerFlo Hero" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
+                        alt="ToGlow Hero" class="w-full max-w-xl max-h-[500px] object-contain drop-shadow-2xl">
                 </div>
             </div>
         </div>
@@ -239,21 +239,21 @@
         <div class="container mx-auto px-6 lg:px-16">
             <h2 class="text-center text-4xl font-bold text-[#7d6b60] mb-12 fade-in-up">About Us</h2>
             <div class="mb-10 fade-in">
-                <img src="{{ asset('assets/gym_foto/download (42).jpg') }}" alt="HerFlo Gym"
+                <img src="{{ asset('assets/gym_foto/download (42).jpg') }}" alt="ToGlow"
                     class="w-full h-[500px] object-cover object-top rounded-xl shadow-lg hover-scale">
             </div>
             <div class="flex flex-col-reverse lg:flex-row items-center gap-10">
                 <div class="lg:w-1/2 space-y-6 text-gray-700 fade-in-up">
                     <p class="text-xl leading-relaxed">
-                        <span class="font-semibold text-[#7d6b60]">HerFlo</span> adalah gym khusus wanita dengan
+                        <span class="font-semibold text-[#7d6b60]">ToGlow</span> adalah gym khusus wanita dengan
                         fasilitas lengkap dan privasi penuh. Kami mendukung setiap langkah perjalanan Anda untuk
                         menjadi lebih sehat, lebih kuat, dan lebih percaya diri.
                     </p>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="{{ asset('assets/gym_foto/download (44).jpg') }}" alt="HerFlo Training Area"
+                    <img src="{{ asset('assets/gym_foto/download (44).jpg') }}" alt="ToGlow Training Area"
                         class="w-full h-48 object-cover rounded-xl shadow-lg hover-scale staggered-item">
-                    <img src="{{ asset('assets/gym_foto/download (47).jpg') }}" alt="HerFlo Facilities"
+                    <img src="{{ asset('assets/gym_foto/download (47).jpg') }}" alt="ToGlow Facilities"
                         class="w-full h-48 object-cover rounded-xl shadow-lg hover-scale staggered-item">
                 </div>
             </div>
@@ -265,7 +265,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div class="fade-in">
                     <img src="{{ asset('assets/gym_foto/Fitness Model Ellie Gonsalves Shares Secret To Her Amazing Physique.jpg') }}"
-                        alt="Membership HerFlo"
+                        alt="Membership ToGlow"
                         class="w-full h-[400px] rounded-2xl shadow-lg object-cover hover-scale">
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
@@ -281,7 +281,7 @@
                             Membership mulai dari 250K/bulan
                         </h2>
                         <p class="text-gray-700 mb-6">
-                            Pilih paket yang sesuai dengan kebutuhanmu dan mulailah perjalanan kebugaran bersama HerFlo.
+                            Pilih paket yang sesuai dengan kebutuhanmu dan mulailah perjalanan kebugaran bersama ToGlow.
                         </p>
                         <a href="#" class="inline-block px-6 py-3 btn-custom hover-scale">Lihat Paket Membership</a>
                     </div>
@@ -327,7 +327,7 @@
                         <span class="text-sm text-gray-500 block">10-10-2025</span>
                         <span class="text-xs uppercase tracking-wider text-[#C5A08A] font-semibold">Lifestyle</span>
                         <h3 class="font-bold text-xl text-[#7d6b60] leading-snug">
-                            Bugar dan Percaya Diri di Herflo: Gym Eksklusif untuk Wanita
+                            Bugar dan Percaya Diri di ToGlow: Gym Eksklusif untuk Wanita
                         </h3>
                         <a href="#" class="inline-block mt-3 text-sm font-semibold text-[#C5A08A] hover:text-[#7d6b60] transition">
                             Read More →
@@ -343,7 +343,7 @@
                         <span class="text-sm text-gray-500 block">10-10-2025</span>
                         <span class="text-xs uppercase tracking-wider text-[#C5A08A] font-semibold">Wellness</span>
                         <h3 class="font-bold text-xl text-[#7d6b60] leading-snug">
-                            Herflo Women’s Gym: Ruang Aman dan Nyaman untuk Perempuan Aktif
+                            ToGlow Women’s Gym: Ruang Aman dan Nyaman untuk Perempuan Aktif
                         </h3>
                         <a href="#" class="inline-block mt-3 text-sm font-semibold text-[#C5A08A] hover:text-[#7d6b60] transition">
                             Read More →
@@ -359,7 +359,7 @@
                         <span class="text-sm text-gray-500 block">10-10-2025</span>
                         <span class="text-xs uppercase tracking-wider text-[#C5A08A] font-semibold">Fitness</span>
                         <h3 class="font-bold text-xl text-[#7d6b60] leading-snug">
-                            Herflo Gym Resmi Dibuka: Tempat Terbaik untuk Membangun Tubuh Sehat
+                            ToGlow Resmi Dibuka: Tempat Terbaik untuk Membangun Tubuh Sehat
                         </h3>
                         <a href="#" class="inline-block mt-3 text-sm font-semibold text-[#C5A08A] hover:text-[#7d6b60] transition">
                             Read More →
